@@ -38,3 +38,21 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card img {
+    border-radius: 10px;
+}
