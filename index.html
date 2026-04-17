@@ -1,306 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atelier Noir</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
- 
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hottiez.Brandz</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+header {
+    background: black;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+.hero {
+    background: #222;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 10px;
+}
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 15px;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    background: orange;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+/* NAVBAR IMPROVEMENT */
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background: orange;
+    color: black;
+    border-radius: 5px;
+}
+
+/* GRID FOR PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CARD EFFECT */
+.card {
+    background: #1c1c1c;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* BUTTON STYLE */
+button {
+    background: orange;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #ff8800;
+}
+</style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">Atelier Noir</a>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<header>
+    <h1>Hotties.Brandz</h1>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+</header>
 
-      <div class="nav-right">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <!-- Hamburger button — only visible on phones -->
-        <button class="menu-btn" id="menuBtn">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
+<section class="hero">
+    <h2>Streetwear Redefined</h2>
+    <p>Own the streets. Wear the culture.</p>
+</section>
 
+<section class="content">
+    <h2>Latest Drops</h2>
+    <p>Hotties.Brandz brings you the latest street fashion.Please feel free to check out our newest collections.</p>
+</section>
 
-  <!-- ==========================================
-       HERO BANNER
-       The big opening section with a headline
-       ========================================== -->
-  <header class="hero" id="home">
-    <div class="container">
-      <p class="badge">New Collection 2025</p>
-      <h1>Dress With<br><span class="highlight">Intention</span></h1>
-      <p class="hero-text">Simple, well-made clothing for people who care about what they wear.</p>
-      <a href="#shop" class="btn">Shop Now</a>
-    </div>
-  </header>
+<section class="content">
+    <h2>About Us</h2>
+    <p>Urban Trendz is a streetwear brand focused on style, culture, and individuality.</p>
+</section>
 
+<section class="content">
+    <h2>Shop Our Collection</h2>
 
-  <!-- ==========================================
-       PRODUCT SECTION
-       A grid of clothing items
-       ========================================== -->
-  <section class="section" id="shop">
-    <div class="container">
-
-      <div class="section-heading">
-        <p class="label">Our Products</p>
-        <h2>Best Sellers</h2>
-      </div>
-
-      <div class="grid-4">
+    <div class="products">
 
         <div class="card">
-          <img src="images/tshirt,jpeg" alt="Classic Tee" />
-          <div class="card-body">
-            <h3>Classic Cotton Tee</h3>
-            <p class="card-price">$45</p>
-          </div>
+            <img src="https://via.placeholder.com/200">
+            <h3>Oversized Hoodie</h3>
+            <p>P350</p>
+            <button>Buy Now</button>
         </div>
 
         <div class="card">
-          <img src="https://picsum.photos/seed/denim-jeans-dark/400/500.jpg" alt="Slim Jeans" />
-          <div class="card-body">
-            <h3>Slim Dark Denim</h3>
-            <p class="card-price">$95</p>
-          </div>
+            <img src="https://via.placeholder.com/200">
+            <h3>Graphic T-Shirt</h3>
+            <p>P180</p>
+            <button>Buy Now</button>
         </div>
-
         <div class="card">
-          <img src="images/hoodie.jpeg" alt="Wool Sweater" />
-          <span class="card-tag">Popular</span>
-          <div class="card-body">
-            <h3>Wool Blend Sweater</h3>
-            <p class="card-price">$120</p>
-          </div>
+            <img src="https://via.placeholder.com/200">
+            <h3>Sneakers</h3>
+            <p>P600</p>
+            <button>Buy Now</button>
         </div>
-
-        <div class="card">
-          <img src="https://picsum.photos/seed/canvas-jacket-olive/400/500.jpg" alt="Canvas Jacket" />
-          <div class="card-body">
-            <h3>Canvas Field Jacket</h3>
-            <p class="card-price">$185</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==========================================
-       ABOUT SECTION
-       Who we are, with an image
-       ========================================== -->
-  <section class="section section-alt" id="about">
-    <div class="container row">
-
-      <div class="col-image">
-        <img src="https://picsum.photos/seed/clothing-workshop/600/700.jpg" alt="Our workshop" />
-      </div>
-
-      <div class="col-text">
-        <p class="label">Our Story</p>
-        <h2>Clothing Made<br>The Right Way</h2>
-        <p>We started Thread & Co. because we were tired of disposable fashion. Every piece we make is designed to last years, not weeks.</p>
-        <p>We work with small family-run factories. We use organic cotton and recycled materials. We keep things simple so you can focus on looking good.</p>
-
-        <div class="stats">
-          <div class="stat">
-            <strong>12K+</strong>
-            <span>Customers</span>
-          </div>
-          <div class="stat">
-            <strong>100%</strong>
-            <span>Organic Cotton</span>
-          </div>
-          <div class="stat">
-            <strong>4.9</strong>
-            <span>Avg Rating</span>
-          </div>
-        </div>
-      </div>
 
     </div>
-  </section>
+</section>
 
+<section class="content">
+    <h2>Gallery</h2>
 
-  <!-- ==========================================
-       REVIEWS SECTION
-       What customers say
-       ========================================== -->
-  <section class="section">
-    <div class="container">
-
-      <div class="section-heading">
-        <p class="label">Reviews</p>
-        <h2>What People Say</h2>
-      </div>
-
-      <div class="grid-3">
-
-        <div class="review">
-          <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p>"Best tee I've ever owned. Soft, holds its shape, and the fit is perfect."</p>
-          <div class="reviewer">
-            <img src="https://picsum.photos/seed/face-anna/60/60.jpg" alt="Anna" />
-            <div>
-              <strong>Lesie.H</strong>
-              <span>Verified Buyer</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review">
-          <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p>"The denim quality is incredible. Six months in and they still look brand new."</p>
-          <div class="reviewer">
-            <img src="https://picsum.photos/seed/face-mike/60/60.jpg" alt="Mike" />
-            <div>
-              <strong>Aswaad.V</strong>
-              <span>Verified Buyer</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
+    <div class="products">
+        <img src="https://via.placeholder.com/250">
+        <img src="https://via.placeholder.com/250">
+        <img src="https://via.placeholder.com/250">
     </div>
-  </section>
+</section>
 
+<section class="content">
+    <h2>Contact Us</h2>
+    <p>Email: hotties.brandz@email.com</p>
+    <p>Phone: +267 123 4567</p>
+</section>
 
-  <!-- ==========================================
-       CONTACT / NEWSLETTER SECTION
-       ========================================== -->
-  <section class="section section-dark" id="contact">
-    <div class="container narrow">
+<section class="content">
+    <h2>Feedback</h2>
 
-      <p class="label label-light">Stay In Touch</p>
-      <h2 class="heading-light">Get 15% Off Your First Order</h2>
-      <p class="text-light">Join our email list and we'll send you a discount code. No spam, ever.</p>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" onclick="showMessage()"></button>
+    </form>
+    <script src="script.js"></script>
 
-      <form class="signup-form" id="signupForm">
-        <input type="email" placeholder="Your email address" required />
-        <button type="submit" class="btn btn-light">Subscribe</button>
-      </form>
-
-      <p class="form-msg" id="formMsg"></p>
-
-    </div>
-  </section>
-
-
-  <!-- ==========================================
-       FOOTER
-       ========================================== -->
-  <footer class="footer">
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div class="footer-about">
-          <a href="#" class="logo">Atelier Noir</a>
-          <p>Simple clothing, made responsibly, built to last.</p>
-          <div class="socials">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-          </div>
-        </div>
-
-        <div>
-          <h4>Shop</h4>
-          <ul>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Tops</a></li>
-            <li><a href="#">Bottoms</a></li>
-            <li><a href="#">Outerwear</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Help</h4>
-          <ul>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#">Size Guide</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Atelier Noir. All rights reserved.</p>
-        <p><a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </div>
-
-    </div>
-  </footer>
-
-
-  <!-- ==========================================
-       JAVASCRIPT
-       Only two simple things:
-       1. Open/close mobile menu
-       2. Handle newsletter form
-       ========================================== -->
-  <script>
-    // --- Mobile Menu Toggle ---
-    var menuBtn = document.getElementById("menuBtn");
-    var navLinks = document.getElementById("navLinks");
-
-    menuBtn.addEventListener("click", function() {
-      navLinks.classList.toggle("open");
-    });
-
-    // --- Newsletter Form ---
-    var form = document.getElementById("signupForm");
-    var formMsg = document.getElementById("formMsg");
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      formMsg.textContent = "You're in! Check your email for your discount code.";
-      formMsg.style.color = "#a3cc56";
-      form.reset();
-    });
-  </script>
+<footer>
+    <p>© 2026 Hotties.Brandz</p>
+    <p>Follow us on Intagram|Twitter|Facebook</p>
+</footer>
 
 </body>
 </html>
-   
-     
-   
-      
-      
-       
