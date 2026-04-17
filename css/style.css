@@ -1,17 +1,4 @@
-/* ==============================================
-   THREAD & CO. — Stylesheet
-   ==============================================
 
-   TIPS FOR BEGINNERS:
-   - Every section is labeled so you can find it
-   - Colors are defined at the very top (easy to change)
-   - Each property is on its own line
-   - The media queries at the bottom handle phones
-   ============================================== */
-
-
-/* ----- COLOR PALETTE -----
-   Change these to retheme the whole site */
 :root {
   --black: #1a1a1a;
   --white: #ffffff;
