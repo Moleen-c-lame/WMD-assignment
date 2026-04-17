@@ -3,328 +3,327 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NOIR — Modern Clothing</title>
+  <title>THREAD & CO. — Clothing</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- This loads a clean font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- This loads small icons (shopping bag, social media, etc.) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  <!-- ===== TOP NAVIGATION BAR ===== -->
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
   <nav class="navbar">
-    <div class="wrapper">
-      <a href="#" class="logo">NOIR</a>
+    <div class="container">
+      <a href="#" class="logo">THREAD <span>&</span> CO.</a>
 
-      <!-- These are the nav links -->
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#shop">Shop</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <!-- Simple icons on the right -->
-      <div class="nav-icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
+      <div class="nav-right">
         <i class="fa-solid fa-bag-shopping"></i>
+        <!-- Hamburger button — only visible on phones -->
+        <button class="menu-btn" id="menuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
-
-      <!-- This hamburger only shows on mobile -->
-      <button class="hamburger" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars"></i>
-      </button>
     </div>
-
-    <!-- This dropdown only shows on mobile -->
-    <ul class="mobile-nav" id="mobileNav">
-      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-      <li><a href="#shop" onclick="toggleMenu()">Shop</a></li>
-      <li><a href="#about" onclick="toggleMenu()">About</a></li>
-      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-    </ul>
   </nav>
 
-  <!-- ===== HERO / BANNER SECTION ===== -->
-  <section class="hero" id="home">
-    <div class="wrapper">
-      <p class="hero-tag">New Season 2025</p>
-      <h1>Style That<br><span class="green">Speaks</span> For Itself</h1>
-      <p class="hero-desc">Curated essentials crafted from premium fabrics. Simple design, maximum impact.</p>
-      <div class="hero-buttons">
-        <a href="#shop" class="btn btn-dark">Shop Now</a>
-        <a href="#about" class="btn btn-outline">Our Story</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== FEATURED PRODUCTS ===== -->
+  <!-- ==========================================
+       HERO BANNER
+       The big opening section with a headline
+       ========================================== -->
+  <header class="hero" id="home">
+    <div class="container">
+      <p class="badge">New Collection 2025</p>
+      <h1>Dress With<br><span class="highlight">Intention</span></h1>
+      <p class="hero-text">Simple, well-made clothing for people who care about what they wear.</p>
+      <a href="#shop" class="btn">Shop Now</a>
+    </div>
+  </header>
+
+
+  <!-- ==========================================
+       PRODUCT SECTION
+       A grid of clothing items
+       ========================================== -->
   <section class="section" id="shop">
-    <div class="wrapper">
-      <div class="section-header">
-        <p class="section-tag">Our Collection</p>
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="label">Our Products</p>
         <h2>Best Sellers</h2>
-        <p class="section-desc">The pieces our customers love the most — timeless and versatile.</p>
       </div>
 
-      <!-- This is the product grid -->
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="https://picsum.photos/seed/wool-sweater/400/500.jpg" alt="Wool Sweater" />
-          <span class="badge">Best Seller</span>
-          <div class="product-info">
-            <h3>Merino Wool Sweater</h3>
-            <p class="price">$128.00</p>
-            <button class="btn btn-dark btn-small">Add to Bag</button>
+      <div class="grid-4">
+
+        <div class="card">
+          <img src="https://picsum.photos/seed/black-tee-minimal/400/500.jpg" alt="Classic Tee" />
+          <div class="card-body">
+            <h3>Classic Cotton Tee</h3>
+            <p class="card-price">$45</p>
           </div>
         </div>
 
-        <div class="product-card">
-          <img src="https://picsum.photos/seed/relaxed-trousers/400/500.jpg" alt="Relaxed Trousers" />
-          <div class="product-info">
-            <h3>Relaxed Fit Trousers</h3>
-            <p class="price">$98.00</p>
-            <button class="btn btn-dark btn-small">Add to Bag</button>
+        <div class="card">
+          <img src="https://picsum.photos/seed/denim-jeans-dark/400/500.jpg" alt="Slim Jeans" />
+          <div class="card-body">
+            <h3>Slim Dark Denim</h3>
+            <p class="card-price">$95</p>
           </div>
         </div>
 
-        <div class="product-card">
-          <img src="https://picsum.photos/seed/wool-overcoat/400/500.jpg" alt="Wool Overcoat" />
-          <span class="badge">New</span>
-          <div class="product-info">
-            <h3>Wool Overcoat</h3>
-            <p class="price">$345.00</p>
-            <button class="btn btn-dark btn-small">Add to Bag</button>
+        <div class="card">
+          <img src="https://picsum.photos/seed/wool-sweater-grey/400/500.jpg" alt="Wool Sweater" />
+          <span class="card-tag">Popular</span>
+          <div class="card-body">
+            <h3>Wool Blend Sweater</h3>
+            <p class="card-price">$120</p>
           </div>
         </div>
 
-        <div class="product-card">
-          <img src="https://picsum.photos/seed/cotton-tee-basics/400/500.jpg" alt="Cotton Tee" />
-          <div class="product-info">
-            <h3>Organic Cotton Tee</h3>
-            <p class="price">$48.00</p>
-            <button class="btn btn-dark btn-small">Add to Bag</button>
+        <div class="card">
+          <img src="https://picsum.photos/seed/canvas-jacket-olive/400/500.jpg" alt="Canvas Jacket" />
+          <div class="card-body">
+            <h3>Canvas Field Jacket</h3>
+            <p class="card-price">$185</p>
           </div>
         </div>
-      </div>
 
-      <div class="section-cta">
-        <a href="#" class="btn btn-dark">View All Products</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHY CHOOSE US ===== -->
-  <section class="section section-dark" id="about">
-    <div class="wrapper">
-      <div class="section-header">
-        <p class="section-tag">Why NOIR</p>
-        <h2>Built On Principles</h2>
-        <p class="section-desc">We believe great clothing should be made the right way.</p>
+
+  <!-- ==========================================
+       ABOUT SECTION
+       Who we are, with an image
+       ========================================== -->
+  <section class="section section-alt" id="about">
+    <div class="container row">
+
+      <div class="col-image">
+        <img src="https://picsum.photos/seed/clothing-workshop/600/700.jpg" alt="Our workshop" />
       </div>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <i class="fa-solid fa-leaf"></i>
-          <h3>Sustainable</h3>
-          <p>Organic and recycled materials in every piece we make.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-hand-holding-heart"></i>
-          <h3>Ethical</h3>
-          <p>Fair wages and safe conditions for every worker.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-truck-fast"></i>
-          <h3>Free Shipping</h3>
-          <p>On all orders over $150, worldwide delivery.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-rotate-left"></i>
-          <h3>Easy Returns</h3>
-          <p>30-day hassle-free return policy on all items.</p>
+      <div class="col-text">
+        <p class="label">Our Story</p>
+        <h2>Clothing Made<br>The Right Way</h2>
+        <p>We started Thread & Co. because we were tired of disposable fashion. Every piece we make is designed to last years, not weeks.</p>
+        <p>We work with small family-run factories. We use organic cotton and recycled materials. We keep things simple so you can focus on looking good.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>12K+</strong>
+            <span>Customers</span>
+          </div>
+          <div class="stat">
+            <strong>100%</strong>
+            <span>Organic Cotton</span>
+          </div>
+          <div class="stat">
+            <strong>4.9</strong>
+            <span>Avg Rating</span>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- ===== ABOUT / BRAND STORY ===== -->
+
+  <!-- ==========================================
+       REVIEWS SECTION
+       What customers say
+       ========================================== -->
   <section class="section">
-    <div class="wrapper about-flex">
-      <div class="about-image">
-        <img src="https://picsum.photos/seed/fashion-studio-dark/600/700.jpg" alt="Our Studio" />
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="label">Reviews</p>
+        <h2>What People Say</h2>
       </div>
-      <div class="about-text">
-        <p class="section-tag">Our Story</p>
-        <h2>Clothing Made<br>With Care</h2>
-        <p>NOIR started in 2018 with a simple idea: make beautiful clothes that don't harm the planet. We partner with small workshops in Portugal and Japan to create pieces that last.</p>
-        <p>Every fabric is chosen for quality and sustainability. Every design is meant to be worn again and again — not just once.</p>
-        <a href="#" class="btn btn-dark">Learn More</a>
+
+      <div class="grid-3">
+
+        <div class="review">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Best tee I've ever owned. Soft, holds its shape, and the fit is perfect."</p>
+          <div class="reviewer">
+            <img src="https://picsum.photos/seed/face-anna/60/60.jpg" alt="Anna" />
+            <div>
+              <strong>Anna R.</strong>
+              <span>Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>"The denim quality is incredible. Six months in and they still look brand new."</p>
+          <div class="reviewer">
+            <img src="https://picsum.photos/seed/face-mike/60/60.jpg" alt="Mike" />
+            <div>
+              <strong>Mike T.</strong>
+              <span>Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Love that everything is sustainable. Great clothes, clear conscience."</p>
+          <div class="reviewer">
+            <img src="https://picsum.photos/seed/face-priya/60/60.jpg" alt="Priya" />
+            <div>
+              <strong>Priya S.</strong>
+              <span>Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ===== REVIEWS ===== -->
-  <section class="section section-gray">
-    <div class="wrapper">
-      <div class="section-header">
-        <p class="section-tag">Reviews</p>
-        <h2>What Customers Say</h2>
-      </div>
 
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p>"The quality is amazing. My wool sweater still looks new after a full year of wear."</p>
-          <div class="reviewer">
-            <img src="https://picsum.photos/seed/face-sarah/60/60.jpg" alt="Sarah" />
-            <div>
-              <strong>Sarah M.</strong>
-              <span>Verified Buyer</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p>"Finally a brand that gets minimalism right. Perfect fit, great fabric, fast delivery."</p>
-          <div class="reviewer">
-            <img src="https://picsum.photos/seed/face-james/60/60.jpg" alt="James" />
-            <div>
-              <strong>James K.</strong>
-              <span>Verified Buyer</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p>"Love that they care about the planet. The organic cotton tee is the softest I own."</p>
-          <div class="reviewer">
-            <img src="https://picsum.photos/seed/face-maya/60/60.jpg" alt="Maya" />
-            <div>
-              <strong>Maya L.</strong>
-              <span>Verified Buyer</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== NEWSLETTER / CONTACT ===== -->
+  <!-- ==========================================
+       CONTACT / NEWSLETTER SECTION
+       ========================================== -->
   <section class="section section-dark" id="contact">
-    <div class="wrapper newsletter-box">
-      <p class="section-tag">Stay Updated</p>
-      <h2>Join Our Newsletter</h2>
-      <p class="section-desc">Get early access to new drops and exclusive discounts. No spam, ever.</p>
+    <div class="container narrow">
 
-      <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+      <p class="label label-light">Stay In Touch</p>
+      <h2 class="heading-light">Get 15% Off Your First Order</h2>
+      <p class="text-light">Join our email list and we'll send you a discount code. No spam, ever.</p>
+
+      <form class="signup-form" id="signupForm">
         <input type="email" placeholder="Your email address" required />
         <button type="submit" class="btn btn-light">Subscribe</button>
       </form>
-      <p class="newsletter-msg" id="newsletterMsg"></p>
+
+      <p class="form-msg" id="formMsg"></p>
+
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
   <footer class="footer">
-    <div class="wrapper">
+    <div class="container">
+
       <div class="footer-grid">
-        <!-- Column 1: Brand -->
-        <div class="footer-col">
-          <a href="#" class="logo">NOIR</a>
-          <p>Thoughtfully crafted clothing for the modern minimalist. Sustainability is our foundation.</p>
-          <div class="social-links">
+
+        <div class="footer-about">
+          <a href="#" class="logo">THREAD <span>&</span> CO.</a>
+          <p>Simple clothing, made responsibly, built to last.</p>
+          <div class="socials">
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
           </div>
         </div>
 
-        <!-- Column 2: Shop links -->
-        <div class="footer-col">
+        <div>
           <h4>Shop</h4>
           <ul>
             <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Best Sellers</a></li>
             <li><a href="#">Tops</a></li>
             <li><a href="#">Bottoms</a></li>
             <li><a href="#">Outerwear</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Company links -->
-        <div class="footer-col">
+        <div>
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="#">Sustainability</a></li>
             <li><a href="#">Careers</a></li>
-            <li><a href="#">Journal</a></li>
           </ul>
         </div>
 
-        <!-- Column 4: Help links -->
-        <div class="footer-col">
+        <div>
           <h4>Help</h4>
           <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Shipping</a></li>
             <li><a href="#">Returns</a></li>
             <li><a href="#">Size Guide</a></li>
+            <li><a href="#">FAQ</a></li>
           </ul>
         </div>
+
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 NOIR. All rights reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-        </div>
+        <p>&copy; 2025 Thread & Co. All rights reserved.</p>
+        <p><a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </div>
+
     </div>
   </footer>
 
-  <!-- Only 2 small JavaScript functions -->
-  <script>
-    // Toggle the mobile menu open/closed
-    function toggleMenu() {
-      var menu = document.getElementById("mobileNav");
-      if (menu.style.display === "flex") {
-        menu.style.display = "none";
-      } else {
-        menu.style.display = "flex";
-      }
-    }
 
-    // Show a message after subscribing
-    function handleSubscribe(e) {
+  <!-- ==========================================
+       JAVASCRIPT
+       Only two simple things:
+       1. Open/close mobile menu
+       2. Handle newsletter form
+       ========================================== -->
+  <script>
+    // --- Mobile Menu Toggle ---
+    var menuBtn = document.getElementById("menuBtn");
+    var navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function() {
+      navLinks.classList.toggle("open");
+    });
+
+    // --- Newsletter Form ---
+    var form = document.getElementById("signupForm");
+    var formMsg = document.getElementById("formMsg");
+
+    form.addEventListener("submit", function(e) {
       e.preventDefault();
-      var msg = document.getElementById("newsletterMsg");
-      msg.textContent = "You're in! Check your email for confirmation.";
-      msg.style.color = "#a3cc56";
-      e.target.reset();
-    }
+      formMsg.textContent = "You're in! Check your email for your discount code.";
+      formMsg.style.color = "#a3cc56";
+      form.reset();
+    });
   </script>
 
 </body>
 </html>
+   
+     
+   
+      
+      
+       
