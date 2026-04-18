@@ -232,12 +232,6 @@ footer {
     border-radius: 10px;
     color: black;
 }
-.about {
-    background:"background2.png";
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-}
 
 .card button {
     position: absolute;
