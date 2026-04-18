@@ -349,3 +349,17 @@ header, .hero, .content, footer {
 .products img:hover {
     transform: scale(1.05);
 }
+.products img {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+@media (max-width: 600px) {
+    .hero {
+        padding: 60px 15px;
+    }
+}
