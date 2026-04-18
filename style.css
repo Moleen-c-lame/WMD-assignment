@@ -400,3 +400,8 @@ header, .hero, .content, footer {
     opacity: 1;
     transform: translateY(0);
 }
+.tagline {
+    color: #d9b3ff;
+    font-size: 18px;
+    margin-top: 10px;
+}
