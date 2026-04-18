@@ -17,10 +17,12 @@ body {
 
 /* HEADER */
 header {
-    background: rgba(20, 0, 30, 0.8);
-    padding: 20px;
-    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background: rgba(40, 0, 60, 0.5);
     backdrop-filter: blur(10px);
+    z-index: 2;
 }
 
 .logo {
@@ -139,8 +141,71 @@ input, textarea {
     background: rgba(255,255,255,0.1);
     color: white;
 }
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("https://images.unsplash.com/photo-1520975916090-3105956dac38") no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-/* FOOTER */
+/* DARK PURPLE OVERLAY */
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 0, 60, 0.6);
+    backdrop-filter: blur(3px);
+}
+/* SPARKLE EFFECT */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: sparkle 20s linear infinite;
+}
+
+@keyframes sparkle {
+    from { transform: translateY(0); }
+    to { transform: translateY(-200px); }
+}
+
+/* CONTENT */
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #ffc1f0;
+    z-index: 1;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.hero-content button {
+    background: linear-gradient(45deg, #ff4db8, #ff80df);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-content button:hover {
+    transform: scale(1.1);
+}
+
 footer {
     background: rgba(20, 0, 30, 0.8);
     text-align: center;
