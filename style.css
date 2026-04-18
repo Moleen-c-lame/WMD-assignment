@@ -145,7 +145,7 @@ input, textarea {
 .hero {
     position: relative;
     height: 90vh;
-    background: url("background2.png") no-repeat center/cover;
+    background: url("background3.png") no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
