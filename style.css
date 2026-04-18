@@ -7,6 +7,7 @@ body {
     background: linear-gradient(120deg, #140018, #220022, #2b0033);
     background-size: 300% 300%;
     animation: luxuryBG 18s ease infinite;
+    padding-top: 80px;
 }
 
 @keyframes luxuryBG {
@@ -16,64 +17,58 @@ body {
 }
 
 /* HEADER */
-header {
+/* NAVBAR CONTAINER */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 50px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0,4);
+
     display: flex;
-    justify-content: space-between; /* pushes logo left, nav right */
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 60px;
-}
-.logo {
-    font-size: 60px;
-    letter-spacing: 4px;
-    font-weight:600;
-    color: #ff99dd;
-    text-shadow: 
-        0 0 8px rgba(255, 105, 180, 0.4),
-        0 0 20px rgba(255, 0, 150, 0.3);
-    transition: 0.3s;
-}
-.logo:hover {
-    transform: scale(1.05);
-}
-@media (max-width: 600px) {
-    .logo {
-        font-size: 28px;
-    }
+
+    background: rgba(10, 0, 20, 0.6);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+    z-index: 1000;
 }
 
-/* NAV */
+/* LOGO */
+.logo {
+    font-size: 38px;
+    letter-spacing: 3px;
+    color: #ff99dd;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+}
+
+/* NAV LINKS */
 .nav {
     display: flex;
-    gap: 15px;
+    gap: 25px;
 }
+
+/* LINK STYLE */
 .nav a {
+    position: relative;
     color: #f5e9ff;
     text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 20px;
     font-size: 14px;
+    letter-spacing: 1px;
     transition: 0.3s;
 }
 
-.nav a:hover {
-    background: rgba(255, 105, 180, 0.2);
-}
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-    }
-
-    .nav {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
+/* UNDERLINE ANIMATION */
 .nav a::after {
     content: "";
-    display: block;
-    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
     width: 0%;
-    background: #ff66cc;
+    height: 2px;
+    background: linear-gradient(90deg, #ff4db8, #ff99dd);
     transition: 0.3s;
 }
 
@@ -81,6 +76,22 @@ header {
     width: 100%;
 }
 
+/* HOVER GLOW */
+.nav a:hover {
+    color: #ff99dd;
+}
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
 
 /* HERO */
 .hero {
