@@ -155,9 +155,9 @@ body {
 button {
     background: linear-gradient(135deg, #ff4db8, #cc33ff);
     border: none;
-    padding: 12px 25px;
+    padding: 10px 20px;
     border-radius: 30px;
-    font-size: 14px;
+    font-weight: 500;
     color: white;
     letter-spacing: 1px;
     cursor: pointer;
@@ -165,8 +165,8 @@ button {
 }
 
 button:hover {
-    box-shadow: 0 0 20px rgba(255, 77, 184, 0.7);
-    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255, 77, 184, 0.6);
+    transform: scale(1.05);
 }
 
 
@@ -333,7 +333,11 @@ html {
     border-radius: 15px;
     transition: 0.3s;
 }
-
+.products img {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
 .products img:hover {
     transform: scale(1.05);
 }   
