@@ -3,7 +3,8 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     color: #f8eaff;
-    background: linear-gradient(-45deg, #1a001f, #2b0033, #3a004d, #1f0026);
+    
+    background:"background2.png";
     background-size: 400% 400%;
     animation: gradientBG 12s ease infinite;
 }
@@ -145,7 +146,7 @@ input, textarea {
 .hero {
     position: relative;
     height: 90vh;
-    background: url("background2.png") no-repeat center/cover;
+    /*background: url("background2.png") no-repeat center/cover;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,14 +162,15 @@ input, textarea {
     backdrop-filter: blur(3px);
 }
 /* SPARKLE EFFECT */
-.hero::before {
+body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
     background-size: 40px 40px;
     animation: sparkle 20s linear infinite;
+    z-index:0;
 }
 
 @keyframes sparkle {
@@ -301,4 +303,8 @@ html {
     .nav {
         flex-direction: column;
     }
+}
+header, .hero, .content, footer {
+    position: relative;
+    z-index: 1;
 }
