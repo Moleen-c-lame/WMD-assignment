@@ -124,4 +124,9 @@ button {
 
 button:hover {
     background: #ff8800;
+}@media (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+    }
 }
+
