@@ -52,7 +52,7 @@ body {
 
 /* LINK STYLE */
 .nav a {
-    position: relative;
+    position: sticky;
     color: #f5e9ff;
     text-decoration: none;
     font-size: 14px;
