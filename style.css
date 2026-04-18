@@ -17,38 +17,70 @@ body {
 
 /* HEADER */
 header {
-    background: rgba(10, 0, 20, 0.6);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between; /* pushes logo left, nav right */
+    align-items: center;
+    padding: 15px 40px;
 }
 .logo {
-    font-size: 30px;
-    letter-spacing: 3px;
+    font-size: 42px;
+    letter-spacing: 4px;
+    font-weight:600;
     color: #ff99dd;
-    text-shadow: 0 0 8px rgba(255, 105, 180, 0.4);
+    text-shadow: 
+        0 0 8px rgba(255, 105, 180, 0.4),
+        0 0 20px rgba(255, 0, 150, 0.3);
+    transition: 0.3s;
+}
+.logo:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 600px) {
+    .logo {
+        font-size: 28px;
+    }
 }
 
 /* NAV */
 .nav {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    gap: 15px;
 }
-
 .nav a {
-    color: #f8eaff;
-    margin: 8px;
+    color: #f5e9ff;
     text-decoration: none;
-    padding: 8px 15px;
+    padding: 8px 12px;
     border-radius: 20px;
+    font-size: 14px;
     transition: 0.3s;
 }
 
 .nav a:hover {
-    background: #ff4db8;
-    color: white;
+    background: rgba(255, 105, 180, 0.2);
 }
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+.nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #ff66cc;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
 
 /* HERO */
 .hero {
