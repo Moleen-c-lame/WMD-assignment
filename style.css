@@ -212,3 +212,30 @@ footer {
     padding: 15px;
     margin-top: 20px;
 }
+.content h2 {
+    text-align: center;
+    color: #ffb3ec;
+    font-size: 32px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card p {
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    background: rgba(255, 182, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.card button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
