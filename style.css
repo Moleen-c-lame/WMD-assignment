@@ -290,3 +290,15 @@ footer {
         transform: translateY(0);
     }
 }
+html {
+    scroll-behavior: smooth;
+}
+@media (max-width: 600px) {
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+}
