@@ -370,3 +370,33 @@ header, .hero, .content, footer {
         padding: 60px 15px;
     }
 }
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
