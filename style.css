@@ -239,3 +239,28 @@ footer {
     left: 50%;
     transform: translateX(-50%);
 }
+/* SOFT GLOW TEXT */
+.hero-content h2 {
+    text-shadow: 0 0 10px #ff66cc, 0 0 20px #ff33aa;
+}
+
+/* LOGO GLOW */
+.logo {
+    text-shadow: 0 0 8px #ff66cc;
+}
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 102, 204, 0.6);
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
