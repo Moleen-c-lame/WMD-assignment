@@ -1,69 +1,130 @@
+/* GENERAL */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    color: #f8eaff;
+    background: linear-gradient(-45deg, #1a001f, #2b0033, #3a004d, #1f0026);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
 }
 
+/* ANIMATION */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* HEADER */
 header {
-    background: black;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: orange;
-}
-
-.hero {
-    background: #222;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.content {
+    background: rgba(20, 0, 30, 0.8);
     padding: 20px;
     text-align: center;
+    backdrop-filter: blur(10px);
 }
 
-footer {
-    background: black;
-    text-align: center;
-    padding: 10px;
+.logo {
+    color: #ff8fd8;
+    font-size: 28px;
+    letter-spacing: 2px;
 }
-.products {
+
+/* NAV */
+.nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-.card {
-    background: #1c1c1c;
-    padding: 15px;
-    border-radius: 10px;
-    width: 220px;
+.nav a {
+    color: #f8eaff;
+    margin: 8px;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background: #ff4db8;
+    color: white;
+}
+
+/* HERO */
+.hero {
     text-align: center;
+    padding: 100px 20px;
 }
 
+.hero h2 {
+    font-size: 40px;
+    color: #ffb3ec;
+}
+
+.hero p {
+    color: #e6ccff;
+}
+
+/* CONTENT */
+.content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+/* CARD STYLE */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* IMAGES */
 .card img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
+/* TEXT */
+.card h3 {
+    color: #ffc1f0;
+}
+
+.card p {
+    color: #ff66cc;
+    font-weight: bold;
+}
+
+/* BUTTON */
 button {
-    background: orange;
+    background: linear-gradient(45deg, #ff4db8, #ff80df);
     border: none;
     padding: 10px;
+    border-radius: 20px;
+    color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
+button:hover {
+    transform: scale(1.1);
+}
+
+/* FORM */
 form {
     max-width: 400px;
     margin: auto;
@@ -73,60 +134,16 @@ input, textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-}
-/* NAVBAR IMPROVEMENT */
-.nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.nav a {
-    padding: 10px 15px;
-    transition: 0.3s;
-}
-
-.nav a:hover {
-    background: orange;
-    color: black;
-    border-radius: 5px;
-}
-
-/* GRID FOR PRODUCTS */
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-/* CARD EFFECT */
-.card {
-    background: #1c1c1c;
-    padding: 15px;
     border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* BUTTON STYLE */
-button {
-    background: orange;
     border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
+    background: rgba(255,255,255,0.1);
+    color: white;
 }
 
-button:hover {
-    background: #ff8800;
-}@media (max-width: 600px) {
-    .nav {
-        flex-direction: column;
-    }
+/* FOOTER */
+footer {
+    background: rgba(20, 0, 30, 0.8);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
-
