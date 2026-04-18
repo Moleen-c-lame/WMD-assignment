@@ -1,3 +1,3 @@
 function showMessage() {
-    alert("Thank you for your feedback!");
+    alert("💖 Thank you for shopping with Hotties.Brandz!");
 }
