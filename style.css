@@ -454,3 +454,16 @@ header, .hero, .content, footer {
     z-index: 1;
     max-width: 600px;
 }
+.shop-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+html {
+    scroll-behavior: smooth;
+}
+#women, #men {
+    margin-top: 40px;
+}
+
