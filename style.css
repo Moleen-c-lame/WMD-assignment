@@ -454,6 +454,3 @@ header, .hero, .content, footer {
     z-index: 1;
     max-width: 600px;
 }
-body.about {
-    background: url("about back.png") no-repeat center/cover;
-}
