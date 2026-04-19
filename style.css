@@ -408,7 +408,7 @@ header, .hero, .content, footer {
 }
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(50px);
     transition: 0.8s ease;
 }
 
