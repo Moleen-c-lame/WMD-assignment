@@ -1,7 +1,7 @@
 /* GENERAL */
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #f5e9ff;
 
     background: linear-gradient(120deg, #140018, #220022, #2b0033);
@@ -39,6 +39,7 @@ body {
 
 /* LOGO */
 .logo {
+    font-family:'Playfair Display' , serif;
     font-size: 38px;
     letter-spacing: 3px;
     color: #ff99dd;
