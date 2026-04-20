@@ -63,9 +63,11 @@ function addToCart(product, price) {
     document.getElementById("total").textContent = total;
 }
 function clearCart() {
-    document.getElementById("cart-items").innerHTML = "";
-    total = 0;
-    document.getElementById("total").textContent = total;
-    if(confirm("Clear all items?")) { ... }
-}
+    let confirmClear = confirm("Are you sure you want to clear your cart?");
 
+    if (confirmClear) {
+        document.getElementById("cart-items").innerHTML = "";
+        total = 0;
+        document.getElementById("total").textContent = total;
+    }
+}
