@@ -32,3 +32,16 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+let total = 0;
+
+function addToCart(product, price) {
+    const cart = document.getElementById("cart-items");
+
+    const li = document.createElement("li");
+    li.textContent = product + " - P" + price;
+
+    cart.appendChild(li);
+
+    total += price;
+    document.getElementById("total").textContent = total;
+}
