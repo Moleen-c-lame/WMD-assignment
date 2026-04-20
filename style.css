@@ -481,8 +481,16 @@ html {
 #total {
     color: #ff99dd;
 }
-.invisible {
-    display: none !important;
+#cart-items button {
+    background: #ff4d88;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
 
-
-.invisible
+#cart-items button:hover {
+    background: #ff1a66;
+}
