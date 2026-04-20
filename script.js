@@ -1,7 +1,7 @@
 function showMessage() {
     alert("💖 Thank you for shopping with Hotties.Brandz!");
 }
-//window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function () {
     let elements = document.querySelectorAll(".reveal");
 
     elements.forEach(el => {
@@ -12,7 +12,7 @@ function showMessage() {
             el.classList.add("active");
         }
     });
-});//
+});
 function showTab(el){
     var id = el.id;
 
