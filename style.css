@@ -494,3 +494,6 @@ html {
 #cart-items button:hover {
     background: #ff1a66;
 }
+#cart-items + h3 + button {
+    background: #cc33ff;
+}
