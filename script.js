@@ -78,8 +78,20 @@ function clearCart() {
     let confirmClear = confirm("Are you sure you want to clear your cart?");
 
     if (confirmClear) {
+        // Clear cart items
         document.getElementById("cart-items").innerHTML = "";
+
+        // Reset total
         total = 0;
         document.getElementById("total").textContent = total;
+
+        // 🔥 RESET ALL BUTTONS
+        const buttons = document.querySelectorAll(".add-btn");
+
+        buttons.forEach(btn => {
+            btn.classList.remove("added");
+            btn.textContent = "Add to Cart";
+            btn.disabled = false;
+        });
     }
 }
