@@ -37,7 +37,7 @@ let total = 0;
 function addToCart(product, price) {
     const cart = document.getElementById("cart-items");
 
-    const li = document.createElement("li");
+    const li = document.createElement("li");   
 
     // Create text
     const text = document.createElement("span");
@@ -60,5 +60,10 @@ function addToCart(product, price) {
     cart.appendChild(li);
 
     total += price;
+    document.getElementById("total").textContent = total;
+}
+function clearCart() {
+    document.getElementById("cart-items").innerHTML = "";
+    total = 0;
     document.getElementById("total").textContent = total;
 }
