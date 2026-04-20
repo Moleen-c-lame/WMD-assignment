@@ -34,25 +34,32 @@ window.addEventListener("scroll", () => {
 });
 let total = 0;
 
-function addToCart(product, price) {
+function addToCart(product, price, button) {
+    // Prevent adding again
+    if (button.classList.contains("added")) return;
+
     const cart = document.getElementById("cart-items");
 
-    const li = document.createElement("li");   
+    const li = document.createElement("li");
 
-    // Create text
     const text = document.createElement("span");
     text.textContent = product + " - P" + price;
 
-    // Create remove button
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "Remove";
     removeBtn.style.marginLeft = "10px";
 
-    // Remove item when clicked
     removeBtn.onclick = function () {
-        cart.removeChild(li);
-        total -= price;
-        document.getElementById("total").textContent = total;
+        if (confirm("Remove this item from cart?")) {
+            cart.removeChild(li);
+            total -= price;
+            document.getElementById("total").textContent = total;
+
+            // Restore button
+            button.classList.remove("added");
+            button.textContent = "Add to Cart";
+            button.disabled = false;
+        }
     };
 
     li.appendChild(text);
@@ -61,6 +68,14 @@ function addToCart(product, price) {
 
     total += price;
     document.getElementById("total").textContent = total;
+
+    // Change button state
+    button.classList.add("added");
+    button.textContent = "Added ✔";
+    button.disabled = true;
+}
+   
+   
 }
 function clearCart() {
     let confirmClear = confirm("Are you sure you want to clear your cart?");
