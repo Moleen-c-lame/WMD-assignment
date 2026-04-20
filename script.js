@@ -38,8 +38,25 @@ function addToCart(product, price) {
     const cart = document.getElementById("cart-items");
 
     const li = document.createElement("li");
-    li.textContent = product + " - P" + price;
 
+    // Create text
+    const text = document.createElement("span");
+    text.textContent = product + " - P" + price;
+
+    // Create remove button
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove";
+    removeBtn.style.marginLeft = "10px";
+
+    // Remove item when clicked
+    removeBtn.onclick = function () {
+        cart.removeChild(li);
+        total -= price;
+        document.getElementById("total").textContent = total;
+    };
+
+    li.appendChild(text);
+    li.appendChild(removeBtn);
     cart.appendChild(li);
 
     total += price;
