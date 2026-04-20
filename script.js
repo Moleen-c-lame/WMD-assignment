@@ -66,4 +66,6 @@ function clearCart() {
     document.getElementById("cart-items").innerHTML = "";
     total = 0;
     document.getElementById("total").textContent = total;
+    if(confirm("Clear all items?")) { ... }
 }
+
