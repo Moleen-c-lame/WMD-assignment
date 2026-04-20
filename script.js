@@ -1,7 +1,7 @@
 function showMessage() {
     alert("💖 Thank you for shopping with Hotties.Brandz!");
 }
-window.addEventListener("scroll", function () {
+//window.addEventListener("scroll", function () {
     let elements = document.querySelectorAll(".reveal");
 
     elements.forEach(el => {
@@ -12,19 +12,19 @@ window.addEventListener("scroll", function () {
             el.classList.add("active");
         }
     });
-});
+});//
+function showTab(el){
+    var id = el.id;
 
-function showTab(e){
-    var id = e.id;
-
-    if (id == "women-shop-tab"){
+    if (id === "women-shop-tab"){
         document.getElementById('women').classList.remove('invisible');
         document.getElementById('men').classList.add('invisible');
-    }else if (id == "men-shop-tab"){
+    } else if (id === "men-shop-tab"){
         document.getElementById('women').classList.add('invisible');
         document.getElementById('men').classList.remove('invisible');
     }
 }
+
 window.addEventListener("scroll", () => {
     document.querySelectorAll(".reveal").forEach(el => {
         if (el.getBoundingClientRect().top < window.innerHeight - 100) {
