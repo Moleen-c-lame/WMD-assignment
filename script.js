@@ -13,17 +13,22 @@ window.addEventListener("scroll", function () {
         }
     });
 });
-function showTab(el){
-    var id = el.id;
+function showTab(el) {
+    const women = document.getElementById("women");
+    const men = document.getElementById("men");
 
-    if (id === "women-shop-tab"){
-        document.getElementById('women').classList.remove('invisible');
-        document.getElementById('men').classList.add('invisible');
-    } else if (id === "men-shop-tab"){
-        document.getElementById('women').classList.add('invisible');
-        document.getElementById('men').classList.remove('invisible');
+    if (el.id === "women-shop-tab") {
+        women.classList.remove("invisible");
+        men.classList.add("invisible");
+    } else {
+        women.classList.add("invisible");
+        men.classList.remove("invisible");
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    showTab(document.getElementById("women-shop-tab"));
+});
 
 window.addEventListener("scroll", () => {
     document.querySelectorAll(".reveal").forEach(el => {
