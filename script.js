@@ -79,7 +79,7 @@ function addToCart(product, price, button) {
     button.textContent = "Added ✔";
     button.disabled = true;
 }
-/*function clearCart() {
+function clearCart() {
     let confirmClear = confirm("Are you sure you want to clear your cart?");
 
     if (confirmClear) {
@@ -99,41 +99,5 @@ function addToCart(product, price, button) {
             btn.disabled = false;
         });
     }
-}*/
-/*function clearCart() {
-    const cart = document.getElementById("cart-items");
-    const totalEl = document.getElementById("total");
-
-    if (!cart || !totalEl) {
-        console.error("Cart elements not found");
-        return;
-    }
-
-    if (confirm("Are you sure you want to clear your cart?")) {
-        cart.innerHTML = "";
-        total = 0;
-        totalEl.textContent = total;
-
-        document.querySelectorAll(".add-btn").forEach(btn => {
-            btn.classList.remove("added");
-            btn.textContent = "Add to Cart";
-            btn.disabled = false;
-        });
-    }
-}*/
-function clearCart() {
-    if (!confirm("Are you sure you want to clear your cart?")) return;
-
-    const cart = document.getElementById("cart-items");
-    const totalEl = document.getElementById("total");
-
-    cart.innerHTML = "";
-    total = 0;
-    totalEl.textContent = "0";
-
-    document.querySelectorAll(".add-btn").forEach(btn => {
-        btn.classList.remove("added");
-        btn.textContent = "Add to Cart";
-        btn.disabled = false;
-    });
 }
+
