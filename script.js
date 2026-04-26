@@ -100,7 +100,7 @@ function addToCart(product, price, button) {
         });
     }
 }*/
-function clearCart() {
+/*function clearCart() {
     const cart = document.getElementById("cart-items");
     const totalEl = document.getElementById("total");
 
@@ -120,4 +120,20 @@ function clearCart() {
             btn.disabled = false;
         });
     }
+}*/
+function clearCart() {
+    if (!confirm("Are you sure you want to clear your cart?")) return;
+
+    const cart = document.getElementById("cart-items");
+    const totalEl = document.getElementById("total");
+
+    cart.innerHTML = "";
+    total = 0;
+    totalEl.textContent = "0";
+
+    document.querySelectorAll(".add-btn").forEach(btn => {
+        btn.classList.remove("added");
+        btn.textContent = "Add to Cart";
+        btn.disabled = false;
+    });
 }
