@@ -1,7 +1,7 @@
 function showMessage() {
     alert("💖 Thank you for shopping with Hotties.Brandz!");
 }
-window.addEventListener("scroll", function () {
+/*window.addEventListener("scroll", function () {
     let elements = document.querySelectorAll(".reveal");
 
     elements.forEach(el => {
@@ -12,7 +12,7 @@ window.addEventListener("scroll", function () {
             el.classList.add("active");
         }
     });
-});
+});*/
 function showTab(el) {
     const women = document.getElementById("women");
     const men = document.getElementById("men");
@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("scroll", () => {
     document.querySelectorAll(".reveal").forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+        if (el.getBoundingClientRect().top < 
+window.innerHeight - 100) {
             el.classList.add("active");
         }
     });
