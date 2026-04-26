@@ -61,8 +61,10 @@ body::before {
 
 .nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 0px 15px 0px 15px;
     margin-top: 10px;
 }
 
