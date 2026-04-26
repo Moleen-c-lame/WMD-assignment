@@ -458,9 +458,11 @@ header, .hero, .content, footer {
 html {
     scroll-behavior: smooth;
 }
+    
 #women, #men {
     margin-top: 40px;
 }
+    
 #cart-items {
     list-style: none;
     padding: 0;
