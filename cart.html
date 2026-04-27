@@ -21,17 +21,26 @@
         <a href="cart.html">Cart 🛒(<span id="cart-count">0</span>)</a>
     </nav>
 </header>
-
-<section class="content">
+<section class="content reveal">
     <h2>Your Cart 🛒</h2>
 
-    <div class="cart-container">
-       <div id="cart-list"></div>
+    <div class="cart-wrapper">
+        <div id="cart-list"></div>
 
-    <h3>Total: P<span id="cart-total">0</span></h3>
-    <button onclick="clearCart()" class="submit-btn">Clear Cart</button>
+        <div class="cart-summary">
+            <h3>Total: P<span id="cart-total">0</span></h3>
+
+            <button onclick="clearCart()" class="clear-btn">Clear Cart</button>
+
+            <div class="btn-center">
+                <button onclick="location.href='checkout.html'" class="submit-btn">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
     </div>
 </section>
+
 
 <section class="content">
     <h2>Checkout Details</h2>
