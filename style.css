@@ -404,7 +404,7 @@ footer {
 .submit-btn {
     display: block;
     margin: 20px auto;
-    width: 100%;
+    width: 60%;
     padding: 12px;
     border: none;
     border-radius: 25px;
@@ -470,4 +470,9 @@ footer {
 }
 form.feedback-form {
     margin-top: 30px;
+}
+.btn-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
