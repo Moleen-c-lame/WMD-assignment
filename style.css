@@ -427,3 +427,36 @@ footer {
     padding: 10px;
     border-radius: 10px;
 }
+#cart-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.08);
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+}
+
+.cart-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-actions button {
+    margin: 0 3px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background: #ff4d6d;
+    color: white;
+}
