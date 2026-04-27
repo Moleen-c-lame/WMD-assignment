@@ -476,3 +476,6 @@ form.feedback-form {
     justify-content: center;
     margin-top: 15px;
 }
+.added {
+    background: gray !important;
+}
