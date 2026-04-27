@@ -56,17 +56,28 @@ function addToCart(product, price, button) {
     removeBtn.style.marginLeft = "10px";
 
     removeBtn.onclick = function () {
-        if (confirm("Remove this item from cart?")) {
-            cart.removeChild(li);
-            total -= price;
-            document.getElementById("total").textContent = total;
+    if (confirm("Remove this item from cart?")) {
+        cart.removeChild(li);
 
-            // Restore button
-            button.classList.remove("added");
-            button.textContent = "Add to Cart";
-            button.disabled = false;
-        }
-    };
+        total -= price;
+        document.getElementById("total").textContent = total;
+
+        // 🔥 REMOVE FROM LOCAL STORAGE
+        let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+        cartData = cartData.filter(item => 
+            !(item.product === product && item.price === price)
+        );
+
+        localStorage.setItem("cart", JSON.stringify(cartData));
+
+        // Restore button
+        button.classList.remove("added");
+        button.textContent = "Add to Cart";
+        button.disabled = false;
+    }
+};
+   
 
     li.appendChild(text);
     li.appendChild(removeBtn);
@@ -87,6 +98,9 @@ function clearCart() {
         // Clear cart items
         document.getElementById("cart-items").innerHTML = "";
 
+        //remove item
+        localStorage.removeItem("cart");
+
         // Reset total
         total = 0;
         document.getElementById("total").textContent = total;
@@ -101,4 +115,41 @@ function clearCart() {
         });
     }
 }
+let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
+cartData.push({ product, price });
+
+localStorage.setItem("cart", JSON.stringify(cartData));
+
+function loadCartPage() {
+    const cartList = document.getElementById("cart-list");
+    const totalEl = document.getElementById("cart-total");
+
+    if (!cartList) return;
+
+    let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let total = 0;
+
+    cartData.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item.product + " - P" + item.price;
+        cartList.appendChild(li);
+
+        total += item.price;
+    });
+
+    totalEl.textContent = total;
+}
+
+document.addEventListener("DOMContentLoaded", loadCartPage);
+
+function submitOrder(event) {
+    event.preventDefault();
+
+    alert("🎉 Order placed successfully! We will contact you soon.");
+
+    localStorage.removeItem("cart");
+
+    window.location.href = "index.html";
+}
