@@ -449,11 +449,16 @@ footer {
 }
 
 .cart-actions button {
-    margin: 0 3px;
+    background: #ff99dd;
+    color:black;
     border: none;
-    padding: 5px 10px;
-    border-radius: 8px;
+    padding: 5px 8px;
+    border-radius: 6px;
     cursor: pointer;
+}
+.cart-actions span {
+    margin: 0 5px;
+    font-weight: bold;
 }
 
 .remove-btn {
