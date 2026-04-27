@@ -68,33 +68,47 @@ function addToCart(product, price, button) {
     alert(product + " added to cart 🛒");
 }
 // ==========================
-// 🛒 ADD TO CART (SHOP PAGE)
+// 📦 LOAD CART (CART PAGE)
 // ==========================
-function addToCart(product, price, button) {
+function loadCartPage() {
+    const cartList = document.getElementById("cart-list");
+    const totalEl = document.getElementById("cart-total");
+
+    if (!cartList) return;
 
     let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+    cartList.innerHTML = "";
 
-    // Check if item already exists
-    let existingItem = cartData.find(item => item.product === product);
+    let total = 0;
 
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
-        cartData.push({ product, price, quantity: 1 });
-    }
+    cartData.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.classList.add("cart-item");
 
-    // Save to localStorage
-    localStorage.setItem("cart", JSON.stringify(cartData));
+        div.innerHTML = `
+            <div class="cart-info">
+                <strong>${item.product}</strong>
+                <span>P${item.price} × ${item.quantity}</span>
+            </div>
 
-    // Update button UI
-    if (button) {
-        button.classList.add("added");
-        button.textContent = "Added ✔";
-        button.disabled = true;
-    }
+            <div class="cart-actions">
+                <button onclick="decreaseQty(${index})">➖</button>
+                <span>${item.quantity}</span>
+                <button onclick="increaseQty(${index})">➕</button>
+                <button onclick="removeItem(${index})" class="remove-btn">Remove</button>
+            </div>
+        `;
 
-    alert(product + " added to cart 🛒");
+        cartList.appendChild(div);
+
+        total += item.price * item.quantity;
+    });
+
+    totalEl.textContent = total;
 }
+
+   
+    
 // ==========================
 // ➕ INCREASE QUANTITY
 // ==========================
