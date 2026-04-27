@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart - Hotties.Brandz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+    <h1 class="logo">Hotties.Brandz</h1>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<section class="content">
+    <h2>Your Cart 🛒</h2>
+
+    <ul id="cart-list"></ul>
+
+    <h3>Total: P<span id="cart-total">0</span></h3>
+</section>
+
+<section class="content">
+    <h2>Checkout Details</h2>
+
+    <form onsubmit="submitOrder(event)" class="feedback-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Phone Number" required>
+        <input type="text" placeholder="Delivery Address" required>
+
+        <button type="submit" class="submit-btn">Place Order</button>
+    </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
