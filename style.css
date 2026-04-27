@@ -460,3 +460,6 @@ footer {
     background: #ff4d6d;
     color: white;
 }
+form.feedback-form {
+    margin-top: 30px;
+}
