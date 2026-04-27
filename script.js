@@ -58,6 +58,15 @@ function addToCart(product, price, button) {
     // Save to localStorage
     localStorage.setItem("cart", JSON.stringify(cartData));
 
+     // 🔥 VISUAL FEEDBACK (better than alert)
+    button.textContent = "Added ✔";
+    button.classList.add("added");
+
+    setTimeout(() => {
+        button.textContent = "Add to Cart";
+        button.classList.remove("added");
+    }, 1500);
+
     // Update button UI
     if (button) {
         button.classList.add("added");
