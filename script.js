@@ -116,8 +116,14 @@ function clearCart() {
     }
 }
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+// Check if item already exists
+let existingItem = cartData.find(item => item.product === product);
 
-cartData.push({ product, price, quantity:1 });
+if (existingItem) {
+    existingItem.quantity += 1; // increase quantity
+} else {
+    cartData.push({ product, price, quantity: 1 });
+}
 
 localStorage.setItem("cart", JSON.stringify(cartData));
 
@@ -139,23 +145,45 @@ function loadCartPage() {
         div.innerHTML = `
             <div class="cart-info">
                 <strong>${item.product}</strong>
-                <span>P${item.price}</span>
+                <span>P${item.price} × ${item.quantity}</span>
             </div>
 
             <div class="cart-actions">
+                <button onclick="decreaseQty(${index})">➖</button>
+                <span>${item.quantity}</span>
+                <button onclick="increaseQty(${index})">➕</button>
                 <button onclick="removeItem(${index})" class="remove-btn">Remove</button>
             </div>
         `;
 
         cartList.appendChild(div);
-        total += item.price;
+
+        total += item.price * item.quantity;
     });
 
     totalEl.textContent = total;
 }
+   function increaseQty(index) {
+    let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
-       
+    cartData[index].quantity += 1;
 
+    localStorage.setItem("cart", JSON.stringify(cartData));
+    loadCartPage();
+}
+function decreaseQty(index) {
+    let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cartData[index].quantity > 1) {
+        cartData[index].quantity -= 1;
+    } else {
+        // remove if quantity becomes 0
+        cartData.splice(index, 1);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cartData));
+    loadCartPage();
+}
 document.addEventListener("DOMContentLoaded", loadCartPage);
 
 function submitOrder(event) {
