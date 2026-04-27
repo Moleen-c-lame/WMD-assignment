@@ -416,18 +416,3 @@ footer {
     transform: scale(1.05);
     opacity: 0.9;
 }
-.slideshow {
-    position: relative;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.slide {
-    width: 100%;
-    display: none;
-    border-radius: 15px;
-}
-
-.slide.active {
-    display: block;
-}
