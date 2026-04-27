@@ -117,7 +117,7 @@ function clearCart() {
 }
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
-cartData.push({ product, price });
+cartData.push({ product, price, quantity:1 });
 
 localStorage.setItem("cart", JSON.stringify(cartData));
 
@@ -128,19 +128,33 @@ function loadCartPage() {
     if (!cartList) return;
 
     let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+    cartList.innerHTML = "";
 
     let total = 0;
 
-    cartData.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = item.product + " - P" + item.price;
-        cartList.appendChild(li);
+    cartData.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.classList.add("cart-item");
 
+        div.innerHTML = `
+            <div class="cart-info">
+                <strong>${item.product}</strong>
+                <span>P${item.price}</span>
+            </div>
+
+            <div class="cart-actions">
+                <button onclick="removeItem(${index})" class="remove-btn">Remove</button>
+            </div>
+        `;
+
+        cartList.appendChild(div);
         total += item.price;
     });
 
     totalEl.textContent = total;
 }
+
+       
 
 document.addEventListener("DOMContentLoaded", loadCartPage);
 
@@ -152,4 +166,15 @@ function submitOrder(event) {
     localStorage.removeItem("cart");
 
     window.location.href = "index.html";
+}
+function removeItem(index) {
+    let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (confirm("Remove this item?")) {
+        cartData.splice(index, 1);
+
+        localStorage.setItem("cart", JSON.stringify(cartData));
+
+        loadCartPage(); // refresh display
+    }
 }
