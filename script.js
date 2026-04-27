@@ -101,4 +101,23 @@ function clearCart() {
         });
     }
 }
+let slideIndex = 0;
 
+function showSlides() {
+    const slides = document.querySelectorAll(".slide");
+
+    slides.forEach(slide => slide.classList.remove("active"));
+
+    slideIndex++;
+
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+
+    slides[slideIndex].classList.add("active");
+
+    setTimeout(showSlides, 3000); // change every 3 seconds
+}
+
+// start slideshow when page loads
+document.addEventListener("DOMContentLoaded", showSlides);
