@@ -444,6 +444,10 @@ footer {
     margin-bottom: 12px;
     border-radius: 12px;
     backdrop-filter: blur(8px);
+    transition:0.3s ease;
+}
+.cart-item:hover {
+    transform: translateY(-3px);
 }
 
 .cart-info {
@@ -478,4 +482,34 @@ form.feedback-form {
 }
 .added {
     background: gray !important;
+}
+.cart-wrapper {
+    max-width: 700px;
+    margin: auto;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+
+    text-align: center;
+}
+
+.clear-btn {
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #ff4db8;
+    color: #ff4db8;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background: #ff4db8;
+    color: white;
 }
