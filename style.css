@@ -509,6 +509,13 @@ form.feedback-form {
     cursor: pointer;
 }
 
+.label {
+   width:  !important;
+   text-align: left !important;
+   color: white;
+   font-family: 'Poppins', sans-serif;
+}
+
 .clear-btn:hover {
     background: #ff4db8;
     color: white;
