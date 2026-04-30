@@ -514,6 +514,8 @@ form.feedback-form {
    text-align: left !important;
    color: white;
    font-family: 'Poppins', sans-serif;
+   font-size: small;
+   margin-bottom: 10px;
 }
 
 .w-full {
