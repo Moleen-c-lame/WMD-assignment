@@ -32,8 +32,6 @@ window.innerHeight - 100) {
 // ADD TO CART (SHOP PAGE)
 function addToCart(product, price, button) {
     
-    updateCartCount();
-    
     let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
     // Check if item already exists
@@ -65,6 +63,7 @@ function addToCart(product, price, button) {
     }
 
     alert(product + " added to cart 🛒");
+    updateCartCount();
 }
 
 // LOAD CART (CART PAGE)
@@ -141,6 +140,7 @@ function removeItem(index) {
         cartData.splice(index, 1);
         localStorage.setItem("cart", JSON.stringify(cartData));
         loadCartPage();
+        updateCartCount();
     }
 }
 
@@ -149,6 +149,7 @@ function clearCart() {
     if (confirm("Are you sure you want to clear your cart?")) {
         localStorage.removeItem("cart");
         loadCartPage();
+        updateCartCount();
     }
 }
 
