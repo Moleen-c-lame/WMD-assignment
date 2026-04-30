@@ -157,7 +157,7 @@ function clearCart() {
 function submitOrder(event) {
     event.preventDefault();
 
-    if (getCartCount() != 0){
+    if (getCartCount() > 0){
         alert("🎉 Order placed successfully!");
 
         localStorage.removeItem("cart");
