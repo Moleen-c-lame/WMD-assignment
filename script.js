@@ -164,6 +164,18 @@ function submitOrder(event) {
     window.location.href = "index.html";
 }
 
+function getCartCount() {
+    let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let count = 0;
+
+    cartData.forEach(item => {
+        count += item.quantity;
+    });
+
+    return count;
+}
+
 
 function updateCartCount() {
     let cartData = JSON.parse(localStorage.getItem("cart")) || [];
