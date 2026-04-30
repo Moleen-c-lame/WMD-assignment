@@ -28,9 +28,8 @@ window.innerHeight - 100) {
     });
 });
 
-// ==========================
-// 🛒 ADD TO CART (SHOP PAGE)
-// ==========================
+
+// ADD TO CART (SHOP PAGE)
 function addToCart(product, price, button) {
     
     updateCartCount();
@@ -67,9 +66,8 @@ function addToCart(product, price, button) {
 
     alert(product + " added to cart 🛒");
 }
-// ==========================
-// 📦 LOAD CART (CART PAGE)
-// ==========================
+
+// LOAD CART (CART PAGE)
 function loadCartPage() {
     const cartList = document.getElementById("cart-list");
     const totalEl = document.getElementById("cart-total");
@@ -109,9 +107,7 @@ function loadCartPage() {
 
    
     
-// ==========================
-// ➕ INCREASE QUANTITY
-// ==========================
+// INCREASE QUANTITY
 function increaseQty(index) {
     let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -119,10 +115,10 @@ function increaseQty(index) {
 
     localStorage.setItem("cart", JSON.stringify(cartData));
     loadCartPage();
+    updateCartCount();
 }
-// ==========================
-// ➖ DECREASE QUANTITY
-// ==========================
+
+// DECREASE QUANTITY
 function decreaseQty(index) {
     let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -134,10 +130,10 @@ function decreaseQty(index) {
 
     localStorage.setItem("cart", JSON.stringify(cartData));
     loadCartPage();
+    updateCartCount();
 }
-// ==========================
-// ❌ REMOVE ITEM
-// ==========================
+
+// REMOVE ITEM
 function removeItem(index) {
     let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -147,18 +143,16 @@ function removeItem(index) {
         loadCartPage();
     }
 }
-// ==========================
-// 🧹 CLEAR CART
-// ==========================
+
+// CLEAR CART
 function clearCart() {
     if (confirm("Are you sure you want to clear your cart?")) {
         localStorage.removeItem("cart");
         loadCartPage();
     }
 }
-// ==========================
-// 📤 SUBMIT ORDER
-// ==========================
+
+// SUBMIT ORDER
 function submitOrder(event) {
     event.preventDefault();
 
@@ -168,6 +162,8 @@ function submitOrder(event) {
 
     window.location.href = "index.html";
 }
+
+
 function updateCartCount() {
     let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -180,9 +176,8 @@ function updateCartCount() {
     const countEl = document.getElementById("cart-count");
     if (countEl) countEl.textContent = count;
 }
-// ==========================
-// 🚀 LOAD ON PAGE START
-// ==========================
+
+// LOAD ON PAGE START
 document.addEventListener("DOMContentLoaded", () => {
     loadCartPage();
     updateCartCount();
