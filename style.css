@@ -516,6 +516,10 @@ form.feedback-form {
    font-family: 'Poppins', sans-serif;
 }
 
+.w-full {
+   width:  !important;
+}
+
 .clear-btn:hover {
     background: #ff4db8;
     color: white;
