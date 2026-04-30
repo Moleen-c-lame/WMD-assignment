@@ -157,11 +157,15 @@ function clearCart() {
 function submitOrder(event) {
     event.preventDefault();
 
-    alert("🎉 Order placed successfully!");
+    if (getCartCount() != 0){
+        alert("🎉 Order placed successfully!");
 
-    localStorage.removeItem("cart");
+        localStorage.removeItem("cart");
 
-    window.location.href = "index.html";
+        window.location.href = "index.html";
+    }else{
+        alert("⚠️ Your cart is empty, Please add items to cart to place order!");
+    }
 }
 
 function getCartCount() {
