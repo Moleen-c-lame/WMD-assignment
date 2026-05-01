@@ -523,6 +523,11 @@ form.feedback-form {
    width:  !important;
 }
 
+.success-icon {
+   height: 500px;
+   padding-top: 100px;
+}
+
 .clear-btn:hover {
     background: #ff4db8;
     color: white;
