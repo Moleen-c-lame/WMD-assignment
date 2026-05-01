@@ -171,12 +171,15 @@ function submitOrder(event) {
         // Remove both sets
         removeElements(itemsToRemove1);
         removeElements(itemsToRemove2);
-        
-        alert("🎉 Order placed successfully!");
+
+        document.getElementById('order-form').classList.add('invisible');
+        document.getElementById('success-banner').classList.remove('invisible');
+        //alert("🎉 Order placed successfully!");
 
         localStorage.removeItem("cart");
+        updateCartCount();
 
-        window.location.href = "index.html";
+        //window.location.href = "index.html";
     }else{
         alert("⚠️ Your cart is empty, Please add items to cart to place order!");
     }
