@@ -153,11 +153,25 @@ function clearCart() {
     }
 }
 
+// REMOVE ELEMENTS
+function removeElements(elements) {
+    elements.forEach(function(el) {
+        el.remove();
+    });
+}
+
 // SUBMIT ORDER
 function submitOrder(event) {
     event.preventDefault();
 
     if (getCartCount() > 0){
+        var itemsToRemove1 = document.querySelectorAll('.cart-actions');
+        var itemsToRemove2 = document.querySelectorAll('.clear-btn');
+
+        // Remove both sets
+        removeElements(itemsToRemove1);
+        removeElements(itemsToRemove2);
+        
         alert("🎉 Order placed successfully!");
 
         localStorage.removeItem("cart");
