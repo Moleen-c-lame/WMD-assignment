@@ -520,7 +520,7 @@ form.feedback-form {
 }
 
 .w-full {
-   width:  !important;
+   width: 100% !important;
 }
 
 .success-icon {
