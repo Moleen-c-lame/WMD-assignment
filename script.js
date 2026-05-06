@@ -216,18 +216,21 @@ document.addEventListener("DOMContentLoaded", () => {
     loadCartPage();
     updateCartCount();
 });
-
 const links = document.querySelectorAll(".nav a");
 
-let currentPage = window.location.pathname.split("/").pop();
+// Get current page properly
+let path = window.location.pathname;
 
-// Fix for homepage
-if (currentPage === "") {
+// Extract file name
+let currentPage = path.substring(path.lastIndexOf("/") + 1);
+
+// Fix homepage
+if (currentPage === "" || currentPage === "WMD-assignment") {
     currentPage = "index.html";
 }
 
 links.forEach(link => {
-    const linkPage = link.getAttribute("href");
+    let linkPage = link.getAttribute("href");
 
     if (linkPage === currentPage) {
         link.classList.add("active");
