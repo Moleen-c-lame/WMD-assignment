@@ -46,7 +46,7 @@ function addToCart(product, price, button) {
     // Save to localStorage
     localStorage.setItem("cart", JSON.stringify(cartData));
 
-     // 🔥 VISUAL FEEDBACK (better than alert)
+     //  VISUAL FEEDBACK (better than alert)
     button.textContent = "Added ✔";
     button.classList.add("added");
 
@@ -174,7 +174,7 @@ function submitOrder(event) {
 
         document.getElementById('order-form').classList.add('invisible');
         document.getElementById('success-banner').classList.remove('invisible');
-        //alert("🎉 Order placed successfully!");
+        //alert(" Order placed successfully!");
 
         localStorage.removeItem("cart");
         updateCartCount();
@@ -215,4 +215,11 @@ function updateCartCount() {
 document.addEventListener("DOMContentLoaded", () => {
     loadCartPage();
     updateCartCount();
+});
+const links = document.querySelectorAll(".nav a");
+
+links.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add("active");
+    }
 });
