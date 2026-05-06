@@ -506,3 +506,7 @@ form.feedback-form {
     background: #ff4db8;
     color: white;
 }
+.nav a.active {
+    color: #ff4db8;
+    border-bottom: 2px solid #ff4db8;
+}
