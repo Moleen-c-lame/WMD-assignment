@@ -1,6 +1,4 @@
-/* =========================
-   GLOBAL / RESET
-========================= */
+/* GLOBAL / RESET */
 * {
     box-sizing: border-box;
 }
@@ -37,9 +35,7 @@ body::before {
     z-index: -1;
 }
 
-/* =========================
-   HEADER / NAV
-========================= */
+/* HEADER / NAV */
 .header {
     width: 100%;
     padding: 20px;
@@ -96,9 +92,7 @@ body::before {
     color: #ff99dd;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 .hero {
     position: relative;
     height: 90vh;
@@ -153,9 +147,7 @@ body::before {
     transform: scale(1.1);
 }
 
-/* =========================
-   CONTENT SECTIONS
-========================= */
+/* CONTENT SECTIONS */
 .content {
     background: rgba(255,255,255,0.03);
     margin: 30px auto;
@@ -170,9 +162,7 @@ body::before {
     font-size: 32px;
 }
 
-/* =========================
-   SHOP NAV (CATEGORIES)
-========================= */
+/* SHOP NAV (CATEGORIES) */
 .floating-nav {
     position: sticky;
     top: 90px;
@@ -188,9 +178,7 @@ body::before {
     border-radius: 30px;
 }
 
-/* =========================
-   PRODUCTS GRID
-========================= */
+/*PRODUCTS GRID */
 #women, #men {
     max-width: 1200px;
     margin: 40px auto;
@@ -210,9 +198,7 @@ body::before {
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-/* =========================
-   PRODUCT CARD
-========================= */
+/* PRODUCT CARD*/
 .card {
     position: relative;
     display: flex;
@@ -253,9 +239,7 @@ body::before {
     align-self: center;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 button {
     background: linear-gradient(135deg, #ff4db8, #cc33ff);
     border: none;
@@ -277,9 +261,7 @@ button.added {
     opacity: 0.7;
 }
 
-/* =========================
-   CART
-========================= */
+/* CART*/
 .cart {
     max-width: 400px;
     margin: 30px auto;
@@ -312,9 +294,7 @@ button.added {
     color: #ff99dd;
 }
 
-/* =========================
-   REVIEWS
-========================= */
+/* REVIEWS */
 .reviews {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -339,9 +319,7 @@ button.added {
     color: #ff99dd;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
     background: rgba(20, 0, 30, 0.8);
     text-align: center;
@@ -349,9 +327,7 @@ footer {
     margin-top: 40px;
 }
 
-/* =========================
-   UTILITIES
-========================= */
+/* UTILITIES*/
 .invisible {
     display: none;
 }
@@ -367,9 +343,7 @@ footer {
     transform: translateY(0);
 }
 
-/* =========================
-   MOBILE
-========================= */
+/*MOBILE*/
 @media (max-width: 600px) {
     .hero-content h2 
 }
