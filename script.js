@@ -216,10 +216,20 @@ document.addEventListener("DOMContentLoaded", () => {
     loadCartPage();
     updateCartCount();
 });
+
 const links = document.querySelectorAll(".nav a");
 
+let currentPage = window.location.pathname.split("/").pop();
+
+// Fix for homepage
+if (currentPage === "") {
+    currentPage = "index.html";
+}
+
 links.forEach(link => {
-    if (link.href === window.location.href) {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage) {
         link.classList.add("active");
     }
 });
