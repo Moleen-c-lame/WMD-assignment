@@ -218,21 +218,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 const links = document.querySelectorAll(".nav a");
 
-// Get current page properly
 let path = window.location.pathname.toLowerCase();
 
-// Extract file name
-let currentPage = path.substring(path.lastIndexOf("/") + 1);
-
-// Fix homepage
-if (currentPage === "" || currentPage === "WMD-assignment") {
-    currentPage = "index.html";
-}
-
+// Loop through all links
 links.forEach(link => {
     let linkPage = link.getAttribute("href").toLowerCase();
 
-    if (currentPage.includes(linkPage)) {
+    // If current URL contains the link name → mark active
+    if (path.includes(linkPage)) {
         link.classList.add("active");
     }
 });
+
+// Special fix for homepage
+if (path.endsWith("/") || path.endsWith("index.html")) {
+    document.querySelector('.nav a[href="index.html"]').classList.add("active");
+}
