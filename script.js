@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const links = document.querySelectorAll(".nav a");
 
 // Get current page properly
-let path = window.location.pathname;
+let path = window.location.pathname.toLowerCase();
 
 // Extract file name
 let currentPage = path.substring(path.lastIndexOf("/") + 1);
@@ -230,9 +230,9 @@ if (currentPage === "" || currentPage === "WMD-assignment") {
 }
 
 links.forEach(link => {
-    let linkPage = link.getAttribute("href");
+    let linkPage = link.getAttribute("href").toLowerCase();
 
-    if (linkPage === currentPage) {
+    if (currentPage.includes(linkPage)) {
         link.classList.add("active");
     }
 });
