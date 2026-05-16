@@ -281,8 +281,6 @@ function loadReviews() {
 
     let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 
-    container.innerHTML = "";
-
     reviews.forEach(review => {
         const card = document.createElement("div");
         card.classList.add("review-card");
