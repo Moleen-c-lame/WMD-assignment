@@ -234,3 +234,6 @@ links.forEach(link => {
 if (path.endsWith("/") || path.endsWith("index.html")) {
     document.querySelector('.nav a[href="index.html"]').classList.add("active");
 }
+function toggleMenu() {
+    document.querySelector(".nav").classList.toggle("show");
+}
