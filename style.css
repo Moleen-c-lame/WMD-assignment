@@ -510,3 +510,38 @@ form.feedback-form {
     color: #ff4db8;
     border-bottom: 2px solid #ff4db8;
 }
+.menu-toggle {
+    display: none;
+}
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        margin: 10px auto;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+
+        background: rgba(0,0,0,0.9);
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav a {
+        display: block;
+        padding: 10px;
+    }
+}
