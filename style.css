@@ -665,9 +665,27 @@ form.feedback-form {
 .delete-btn:hover {
     background: #ff1a4d;
 }
-.stars {
-    color: gold;
-    font-size: 18px;
-    margin: 5px 0;
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
-``
+
+.star-rating span {
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
+    transition: 0.3s;
+}
+
+/* Hover glow */
+.star-rating span:hover {
+    transform: scale(1.2);
+}
+
+/* Active stars */
+.star-rating span.active {
+    color: gold;
+    text-shadow: 0 0 8px gold;
+}
