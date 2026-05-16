@@ -319,13 +319,21 @@ button.added {
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transition: 0.3s ease;
-    width: 280px;
+    width: 300px;
+    height:200px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space between;
+    text-align:center;
+    align-items:center;
 }
 
 .review-card:hover {
     transform: translateY(-5px);
 }
 .review-card p {
+    display:flex;
+    overflow:hidden;
     font-style: italic;
 }
 
