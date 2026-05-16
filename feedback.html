@@ -33,15 +33,15 @@
     <input type="email" id="email" placeholder="Your Email" required>
     <textarea id="message" placeholder="Write Your Message..." rows="5" required></textarea>
     
-  <select id="rating" required>
-    <option value="">Select Rating</option>
-    <option value="1">⭐</option>
-    <option value="2">⭐⭐</option>
-    <option value="3">⭐⭐⭐</option>
-    <option value="4">⭐⭐⭐⭐</option>
-    <option value="5">⭐⭐⭐⭐⭐</option>
-</select>
-``      
+ <div class="star-rating">
+    <span onclick="setRating(1)">⭐</span>
+    <span onclick="setRating(2)">⭐</span>
+    <span onclick="setRating(3)">⭐</span>
+    <span onclick="setRating(4)">⭐</span>
+    <span onclick="setRating(5)">⭐</span>
+</div>
+
+<input type="hidden" id="rating" required>
 <button type="submit" class="submit-btn">Submit Feedback</button>
 
 </form>
