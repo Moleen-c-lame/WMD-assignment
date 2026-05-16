@@ -256,11 +256,13 @@ function submitFeedback(event) {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
+    const rating = document.getElementById("rating").value;
 
     const review = {
         name: name,
         email: email,
-        message: message
+        message: message,
+        rating: rating.
     };
 
     let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
@@ -275,6 +277,7 @@ function submitFeedback(event) {
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
+    document.getElementById("rating").value = "";
 }
 ``
 function loadReviews() {
@@ -286,12 +289,17 @@ function loadReviews() {
     
     container.innerHTML = "";
 
-    reviews.forEach(review => {
+    reviews.forEach(review, index) => {
+        
+       //  Convert number to stars
+        let stars = "⭐".repeat(review.rating);
+
         const card = document.createElement("div");
         card.classList.add("review-card");
 
         card.innerHTML = `
             <p>"${review.message}"</p>
+            <div class="stars">${stars}</div>
             <h4>- ${review.name}</h4>
             <button onclick="deleteReview(${index})" class="delete-btn">Remove</button>
         `;
