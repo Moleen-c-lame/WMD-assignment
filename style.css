@@ -569,7 +569,8 @@ form.feedback-form {
     }
 
     .review-card {
-        width: 90%;
+        width: 85%;
+        max-width:320px;
     }
 }
 @media (max-width: 768px) {
@@ -581,4 +582,29 @@ form.feedback-form {
 }
 .invisible {
     display: none;
+}
+@media (max-width: 768px) {
+
+    .cart-wrapper {
+        width: 95%;
+        margin: auto;
+    }
+
+    .cart-summary {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .feedback-form {
+        width: 90%;
+        padding: 20px;
+    }
+}
+@media (max-width: 768px) {
+
+    .submit-btn,
+    .clear-btn {
+        width: 100%;
+    }
 }
