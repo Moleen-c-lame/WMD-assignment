@@ -297,6 +297,8 @@ function loadReviews() {
         `;
         container.appendChild(card);
     });
+    // Run when page loads
+window.onload = loadReviews;
 }
 function deleteReview(index) {
     let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
@@ -307,7 +309,14 @@ function deleteReview(index) {
 
     loadReviews(); //refresh display
 }
+function deleteReview(index) {
+    if (!confirm("Are you sure you want to delete this review?")) return;
 
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 
-// Run when page loads
-window.onload = loadReviews;
+    reviews.splice(index, 1);
+
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+
+    loadReviews();
+}
