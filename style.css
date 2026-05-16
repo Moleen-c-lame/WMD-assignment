@@ -383,7 +383,8 @@ footer {
 }
 
 .submit-btn {
-    display: block;
+    display: inline-block;
+    text-decoration:none;
     margin: 20px auto;
     width: 60%;
     padding: 12px;
