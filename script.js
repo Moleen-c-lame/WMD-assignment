@@ -1,3 +1,6 @@
+function toggleMenu() {
+    document.querySelector(".nav").classList.toggle("show");
+}
 function showMessage() {
     alert("💖 Thank you for shopping with Hotties.Brandz!");
 }
@@ -216,24 +219,31 @@ document.addEventListener("DOMContentLoaded", () => {
     loadCartPage();
     updateCartCount();
 });
-const links = document.querySelectorAll(".nav a");
+document.addEventListener("DOMContentLoaded", () => {
 
-let path = window.location.pathname.toLowerCase();
+    const links = document.querySelectorAll(".nav a");
 
-// Loop through all links
-links.forEach(link => {
-    let linkPage = link.getAttribute("href").toLowerCase();
+    let path = window.location.pathname.toLowerCase();
 
-    // If current URL contains the link name → mark active
-    if (path.includes(linkPage)) {
-        link.classList.add("active");
+    // Loop through nav links
+    links.forEach(link => {
+
+        let linkPage = link.getAttribute("href").toLowerCase();
+
+        if (path.includes(linkPage)) {
+            link.classList.add("active");
+        }
+
+    });
+
+    // Homepage special case
+    if (path.endsWith("/") || path.endsWith("index.html")) {
+
+        const homeLink = document.querySelector('.nav a[href="index.html"]');
+
+        if (homeLink) {
+            homeLink.classList.add("active");
+        }
     }
-});
 
-// Special fix for homepage
-if (path.endsWith("/") || path.endsWith("index.html")) {
-    document.querySelector('.nav a[href="index.html"]').classList.add("active");
-}
-function toggleMenu() {
-    document.querySelector(".nav").classList.toggle("show");
-}
+});
