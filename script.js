@@ -247,3 +247,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+function submitFeedback(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const review = {
+        name: name,
+        email: email,
+        message: message
+    };
+
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+    reviews.push(review);
+
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+
+    alert("Feedback submitted successfully!");
+
+    // Clear form
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+}
+``
