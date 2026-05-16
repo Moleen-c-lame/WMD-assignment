@@ -283,6 +283,8 @@ function loadReviews() {
     if (!container) return;
 
     let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    
+    container.innerHTML = "";
 
     reviews.forEach(review => {
         const card = document.createElement("div");
@@ -291,11 +293,21 @@ function loadReviews() {
         card.innerHTML = `
             <p>"${review.message}"</p>
             <h4>- ${review.name}</h4>
+            <button onclick="deleteReview(${index})" class="delete-btn">Remove</button>
         `;
-
         container.appendChild(card);
     });
 }
+function deleteReview(index) {
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+    reviews.splice(index, 1); // remove selected review
+
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+
+    loadReviews(); //refresh display
+}
+
 
 // Run when page loads
 window.onload = loadReviews;
