@@ -665,3 +665,9 @@ form.feedback-form {
 .delete-btn:hover {
     background: #ff1a4d;
 }
+.stars {
+    color: gold;
+    font-size: 18px;
+    margin: 5px 0;
+}
+``
