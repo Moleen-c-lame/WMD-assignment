@@ -9,6 +9,9 @@ function showTab(el) {
     const women = document.getElementById("women");
     const men = document.getElementById("men");
 
+    // stop error if elements don't exist
+    if (!el || !women || !men) return;
+
     if (el.id === "women-shop-tab") {
         women.classList.remove("invisible");
         men.classList.add("invisible");
