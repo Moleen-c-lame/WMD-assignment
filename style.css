@@ -59,7 +59,7 @@ header {
     text-shadow: 0 0 8px #ff66cc;
     text-align: center;
     flex:1;
-    text-allign:center;
+    text-align:center;
 }
 
 .nav {
@@ -506,8 +506,7 @@ form.feedback-form {
 }
 
 .label {
-   width:  !important;
-   text-align: left !important;
+   text-align: left;
    color: white;
    font-family: 'Poppins', sans-serif;
    font-size: small;
@@ -540,29 +539,40 @@ form.feedback-form {
     font-size: 30px;
     cursor: pointer;
 }
+/* MOBILE NAVIGATION */
 @media (max-width: 768px) {
-.menu-toggle {
-    display: block;
-    position: absolute;
-    left: 20px;
-    top: 25px;
 
-    background: none;
-    border: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-}
+    header {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 28px;
+        flex: 1;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
 
     .nav {
         display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(10,0,20,0.96);
         flex-direction: column;
-        text-align: center;
-        gap: 15px;
-
-        background: rgba(0,0,0,0.9);
-        padding: 20px;
-        border-radius: 15px;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 0;
+        z-index: 999;
     }
 
     .nav.show {
@@ -570,11 +580,11 @@ form.feedback-form {
     }
 
     .nav a {
-        display: block;
-        padding: 10px;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 17px;
     }
-}
-@media (max-width: 768px) {
 
     .reviews {
         flex-direction: column;
@@ -582,21 +592,14 @@ form.feedback-form {
     }
 
     .review-card {
-        width: 85%;
-        max-width:320px;
+        width: 90%;
+        max-width: 320px;
     }
-}
-@media (max-width: 768px) {
 
     .feedback-form {
         width: 90%;
         padding: 20px;
     }
-}
-.invisible {
-    display: none;
-}
-@media (max-width: 768px) {
 
     .cart-wrapper {
         width: 95%;
@@ -605,19 +608,29 @@ form.feedback-form {
 
     .cart-summary {
         width: 100%;
-        padding: 20px;
         box-sizing: border-box;
     }
 
-    .feedback-form {
+    .submit-btn,
+    .clear-btn {
+        width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+}
+.invisible {
+    display: none;
+}
+
+.feedback-form {
         width: 90%;
         padding: 20px;
     }
 }
-@media (max-width: 768px) {
-
-    .submit-btn,
-    .clear-btn {
+.submit-btn,
+.clear-btn {
         width: 100%;
     }
 }
