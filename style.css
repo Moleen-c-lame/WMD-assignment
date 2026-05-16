@@ -563,3 +563,6 @@ form.feedback-form {
         width: 90%;
     }
 }
+.invisible {
+    display: none;
+}
