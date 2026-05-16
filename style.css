@@ -1,9 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 /* GLOBAL / RESET */
 * {
     box-sizing: border-box;
 }
 
 html {
+    background: linear-gradient(120deg, #140018, #220022, #2b0033);
     scroll-behavior: smooth;
 }
 
@@ -12,10 +18,12 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #f5e9ff;
     padding-top: 80px;
-
     background: linear-gradient(120deg, #140018, #220022, #2b0033);
     background-size: 300% 300%;
     animation: luxuryBG 18s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 @keyframes luxuryBG {
@@ -320,26 +328,25 @@ button.added {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transition: 0.3s ease;
     width: 300px;
-    height:200px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    text-align:center;
-    align-items:center;
+    height: 200px; /* fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ensures top + bottom spacing */
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* VERY IMPORTANT */
 }
 
 .review-card:hover {
     transform: translateY(-5px);
 }
 .review-card p {
-    display:flex;
-    overflow:hidden;
     font-style: italic;
-    -webkit-line-clamp: 3;  /* limits to 3 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* limits text to 3 lines */
     -webkit-box-orient: vertical;
-
+    overflow: hidden;
 }
-
 .review-card h4 {
     margin-top: auto;
     color: #ff4db8;
@@ -350,7 +357,7 @@ footer {
     background: rgba(20, 0, 30, 0.8);
     text-align: center;
     padding: 15px;
-    margin-top: 40px;
+    margin-top: auto;
 }
 /*utilities*/
 .reveal {
