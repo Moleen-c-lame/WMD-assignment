@@ -323,7 +323,7 @@ button.added {
     height:200px;
     display:flex;
     flex-direction:column;
-    justify-content:space between;
+    justify-content:space-between;
     text-align:center;
     align-items:center;
 }
@@ -335,10 +335,13 @@ button.added {
     display:flex;
     overflow:hidden;
     font-style: italic;
+    -webkit-line-clamp: 3;  /* limits to 3 lines */
+    -webkit-box-orient: vertical;
+
 }
 
 .review-card h4 {
-    margin-top: 15px;
+    margin-top: auto;
     color: #ff4db8;
 }
 
