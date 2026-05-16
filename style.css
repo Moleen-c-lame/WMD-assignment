@@ -58,7 +58,8 @@ header {
     color: #ff99dd;
     text-shadow: 0 0 8px #ff66cc;
     text-align: center;
-    margin:auto;
+    flex:1;
+    text-allign:center;
 }
 
 .nav {
