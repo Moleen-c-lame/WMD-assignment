@@ -67,9 +67,10 @@ header {
 }
 
 .logo img {
-    height: 60px;
-    width: auto;
+    width: 180px;      /* desktop size */
+    height: auto;
     object-fit: contain;
+    display: block;
 }
 
 .nav {
@@ -692,4 +693,12 @@ form.feedback-form {
 .star-rating span.active {
     color: gold;
     text-shadow: 0 0 8px gold;
+}
+/* MOBILE LOGO */
+@media (max-width: 768px) {
+
+    .logo img {
+        width: 120px;   /* bigger on phone */
+    }
+
 }
