@@ -309,6 +309,20 @@ function loadReviews() {
  // Run when page loads
 window.onload = loadReviews;
 
+function setRating(value) {
+    document.getElementById("rating").value = value;
+
+    const stars = document.querySelectorAll(".star-rating span");
+
+    stars.forEach((star, index) => {
+        if (index < value) {
+            star.classList.add("active");
+        } else {
+            star.classList.remove("active");
+        }
+    });
+}
+
 function deleteReview(index) {
     let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 
