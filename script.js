@@ -256,7 +256,7 @@ function submitFeedback(event) {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
-    const rating = document.getElementById("rating").value;
+    const rating = Number(document.getElementById("rating").value);
 
     const review = {
         name: name,
@@ -279,7 +279,7 @@ function submitFeedback(event) {
     document.getElementById("message").value = "";
     document.getElementById("rating").value = "";
 }
-``
+
 function loadReviews() {
     const container = document.getElementById("reviews-container");
 
@@ -307,7 +307,7 @@ function loadReviews() {
     });
 }
  // Run when page loads
-window.onload = loadReviews;
+document.addEventListener("DOMContentLoaded", loadReviews);
 
 function setRating(value) {
     document.getElementById("rating").value = value;
