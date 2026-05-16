@@ -274,3 +274,27 @@ function submitFeedback(event) {
     document.getElementById("message").value = "";
 }
 ``
+function loadReviews() {
+    const container = document.getElementById("reviews-container");
+
+    if (!container) return;
+
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+    container.innerHTML = "";
+
+    reviews.forEach(review => {
+        const card = document.createElement("div");
+        card.classList.add("review-card");
+
+        card.innerHTML = `
+            <p>"${review.message}"</p>
+            <h4>- ${review.name}</h4>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+// Run when page loads
+window.onload = loadReviews;
