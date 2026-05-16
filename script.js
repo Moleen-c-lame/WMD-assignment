@@ -262,7 +262,7 @@ function submitFeedback(event) {
         name: name,
         email: email,
         message: message,
-        rating: rating.
+        rating: rating
     };
 
     let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
@@ -289,7 +289,7 @@ function loadReviews() {
     
     container.innerHTML = "";
 
-    reviews.forEach(review, index) => {
+    reviews.forEach((review, index) => {
         
        //  Convert number to stars
         let stars = "⭐".repeat(review.rating);
@@ -305,9 +305,10 @@ function loadReviews() {
         `;
         container.appendChild(card);
     });
-    // Run when page loads
-window.onload = loadReviews;
 }
+ // Run when page loads
+window.onload = loadReviews;
+
 function deleteReview(index) {
     let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 
@@ -316,15 +317,4 @@ function deleteReview(index) {
     localStorage.setItem("reviews", JSON.stringify(reviews));
 
     loadReviews(); //refresh display
-}
-function deleteReview(index) {
-    if (!confirm("Are you sure you want to delete this review?")) return;
-
-    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-
-    reviews.splice(index, 1);
-
-    localStorage.setItem("reviews", JSON.stringify(reviews));
-
-    loadReviews();
 }
