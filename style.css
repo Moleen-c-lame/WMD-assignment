@@ -296,8 +296,10 @@ button.added {
 
 /* REVIEWS */
 .reviews {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margn-top:30px;
     gap: 20px;
 }
 
@@ -307,16 +309,21 @@ button.added {
     border-radius: 15px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.1);
-    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+    width: 280px;
 }
 
 .review-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(255,105,180,0.3);
+}
+.review-card p {
+    font-style: italic;
 }
 
 .review-card h4 {
-    color: #ff99dd;
+    margin-top: 15px;
+    color: #ff4db8;
 }
 
 /* FOOTER */
@@ -543,5 +550,16 @@ form.feedback-form {
     .nav a {
         display: block;
         padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 90%;
     }
 }
