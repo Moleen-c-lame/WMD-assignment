@@ -381,7 +381,15 @@ footer {
 .feedback-form textarea::placeholder {
     color: #ccc;
 }
-
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    outline: none;
+    border: 1px solid #ff4db8;
+    box-shadow: 0 0 10px rgba(255,77,184,0.5);
+}
+.feedback-form button {
+    width: 100%;
+}
 .submit-btn {
     display: inline-block;
     text-decoration:none;
@@ -562,6 +570,13 @@ form.feedback-form {
 
     .review-card {
         width: 90%;
+    }
+}
+@media (max-width: 768px) {
+
+    .feedback-form {
+        width: 90%;
+        padding: 20px;
     }
 }
 .invisible {
