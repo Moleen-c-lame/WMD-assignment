@@ -36,7 +36,7 @@ body::before {
 }
 
 /* HEADER / NAV */
-.header {
+header {
     width: 100%;
     padding: 20px;
     background: rgba(10, 0, 20, 0.6);
@@ -44,6 +44,11 @@ body::before {
     border-bottom: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 5px 20px rgba(0,0,0,0.4);
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
 }
 
 .logo {
@@ -53,6 +58,7 @@ body::before {
     color: #ff99dd;
     text-shadow: 0 0 8px #ff66cc;
     text-align: center;
+    margin:auto;
 }
 
 .nav {
@@ -68,7 +74,7 @@ body::before {
     position: relative;
     color: #f5e9ff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 1px;
     transition: 0.3s;
 }
@@ -155,6 +161,7 @@ body::before {
     border-radius: 20px;
     max-width: 1200px;
     text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 .content h2 {
@@ -299,7 +306,7 @@ button.added {
     display: flex;
     flex-wrap:wrap;
     justify-content:center;
-    margn-top:30px;
+    margin-top:30px;
     gap: 20px;
 }
 
@@ -333,12 +340,7 @@ footer {
     padding: 15px;
     margin-top: 40px;
 }
-
-/* UTILITIES*/
-.invisible {
-    display: none;
-}
-
+/*utilities*/
 .reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -352,7 +354,10 @@ footer {
 
 /*MOBILE*/
 @media (max-width: 600px) {
-    .hero-content h2 
+   
+    .hero-content h2{
+        font-size:32px;
+    }
 }
 .feedback-form {
     text-align: center;
@@ -528,18 +533,25 @@ form.feedback-form {
 }
 .menu-toggle {
     display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
 }
 @media (max-width: 768px) {
+.menu-toggle {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 25px;
 
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
-        margin: 10px auto;
-    }
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
 
     .nav {
         display: none;
