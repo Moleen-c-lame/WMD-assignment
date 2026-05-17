@@ -555,16 +555,28 @@ form.feedback-form {
     font-size: 30px;
     cursor: pointer;
 }
-/* MOBILE NAVIGATION */
+/* DESKTOP NAV (default) */
+.nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    gap: 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* MOBILE NAV */
 @media (max-width: 1024px) {
 
     header {
         padding: 15px 20px;
     }
-}
 
     .menu-toggle {
-        display: none !important;
+        display: block;
         background: none;
         border: none;
         color: white;
@@ -573,24 +585,32 @@ form.feedback-form {
     }
 
     .nav {
-        display: flex !important;
+        display: none;
         position: absolute;
         top: 80px;
         left: 0;
         width: 100%;
+
         background: rgba(10,0,20,0.96);
+
         flex-direction: column;
         align-items: center;
         gap: 10px;
         padding: 20px 0;
         z-index: 999;
-        transition:all 0.3s ease;
     }
 
     .nav.show {
         display: flex;
-        animation: slideDown 0.3s ease;
-    } 
+    }
+
+    .nav a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 17px;
+    }
+}
      
 @keyframes slideDown {
     from {
@@ -602,13 +622,6 @@ form.feedback-form {
         opacity: 1;
     }
 }
-    .nav a {
-        width: 100%;
-        text-align: center;
-        padding: 12px;
-        font-size: 17px;
-    }
-
     .reviews {
         flex-direction: column;
         align-items: center;
