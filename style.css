@@ -63,11 +63,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
 }
 
 .logo img {
-    width: 180px;      /* desktop size */
+    width: 150px;      /* desktop size */
     height: auto;
     object-fit: contain;
     display: block;
@@ -562,13 +561,6 @@ form.feedback-form {
     header {
         padding: 15px 20px;
     }
-
-   @media (max-width: 768px) {
-
-    .logo img {
-        height: 45px;
-    }
-
 }
 
     .menu-toggle {
@@ -698,7 +690,8 @@ form.feedback-form {
 @media (max-width: 768px) {
 
     .logo img {
-        width: 120px;   /* bigger on phone */
+        width:clamp(100px, 10vw, 160px); /* bigger on phone */
+        height:auto;
     }
 
 }
