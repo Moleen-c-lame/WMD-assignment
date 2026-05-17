@@ -79,6 +79,7 @@ header {
     gap: 20px;
     padding: 0px 15px 0px 15px;
     margin-top: 10px;
+    transition: all 0.3s ease;
 }
 
 .nav a {
@@ -87,7 +88,6 @@ header {
     text-decoration: none;
     font-size: 16px;
     letter-spacing: 1px;
-    transition: 0.3s;
 }
 
 .nav a::after {
@@ -584,12 +584,24 @@ form.feedback-form {
         gap: 10px;
         padding: 20px 0;
         z-index: 999;
+        transition:all 0.3s ease;
     }
 
     .nav.show {
         display: flex;
+        animation: slideDown 0.3s ease;
+    } 
+     
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
     }
-
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
     .nav a {
         width: 100%;
         text-align: center;
