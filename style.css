@@ -57,11 +57,11 @@ header {
     position: relative;
 }
 
-.logo {
+/*.logo {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+}*/
 
 .nav {
     display: flex;
@@ -704,22 +704,35 @@ form.feedback-form {
 }
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 38px;
+    font-size: 52px;
+    font-weight: bold;
     letter-spacing: 3px;
-    color: #ff99dd;
-    text-shadow:
-        0 0 8px #ff66cc,
-        0 0 15px #ff33aa,
-        0 0 25px #ff1493;
 
-    white-space: nowrap;
+    color: #ffd6f2;
+
+    text-shadow:
+        0 0 5px #ff66cc,
+        0 0 10px #ff66cc,
+        0 0 20px #ff33aa,
+        0 0 40px rgba(255, 0, 150, 0.8);
+
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.03);
+    text-shadow:
+        0 0 8px #ff99dd,
+        0 0 15px #ff66cc,
+        0 0 30px #ff33aa;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
 
     .logo {
-        font-size: 28px;
+        font-size: 34px;
+        letter-spacing: 2px;
     }
 
 }
