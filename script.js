@@ -5,11 +5,11 @@ function showMessage() {
     alert("💖 Thank you for shopping with Hotties.Brandz!");
 }
 
-function showTab(el) {
+/*function showTab(el) {
     const women = document.getElementById("women");
     const men = document.getElementById("men");
 
-    // stop error if elements don't exist
+     //stop error if elements don't exist
     if (!el || !women || !men) return;
 
     if (el.id === "women-shop-tab") {
@@ -23,6 +23,42 @@ function showTab(el) {
 
 document.addEventListener("DOMContentLoaded", () => {
     showTab(document.getElementById("women-shop-tab"));
+});*/
+function showTab(section) {
+
+    const women = document.getElementById("women");
+    const men = document.getElementById("men");
+
+    const womenBtn = document.getElementById("women-shop-tab");
+    const menBtn = document.getElementById("men-shop-tab");
+
+    // Safety check
+    if (!women || !men) return;
+
+    // SHOW WOMEN
+    if (section === "women") {
+
+        women.classList.remove("invisible");
+        men.classList.add("invisible");
+
+        if (womenBtn) womenBtn.classList.add("active");
+        if (menBtn) menBtn.classList.remove("active");
+    }
+
+    // SHOW MEN
+    else if (section === "men") {
+
+        men.classList.remove("invisible");
+        women.classList.add("invisible");
+
+        if (menBtn) menBtn.classList.add("active");
+        if (womenBtn) womenBtn.classList.remove("active");
+    }
+}
+
+// LOAD WOMEN SECTION BY DEFAULT
+document.addEventListener("DOMContentLoaded", () => {
+    showTab("women");
 });
 
 window.addEventListener("scroll", () => {
