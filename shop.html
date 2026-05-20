@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
+<header class="container-fluid">
      <h1 class="logo">Hotties.Brandz</h1>
     <button class="menu-toggle" onclick="toggleMenu()">
     ☰
@@ -28,7 +28,7 @@
 </header>
 
 <!-- CATEGORY BUTTONS -->
-<section class="content">
+<section class="content container">
     <h2>Shop Categories</h2>
 
     <div class="floating-nav">
@@ -41,33 +41,33 @@
 <section id="women" class="content shop-tab">
     <h2>Women Collection</h2>
 
-    <div class="products">
+    <div class="products row g-4">
 
-        <div class="card">
+        <div class="card col-md-4 col-sm-6">
             <img src="maxidress.png">
             <h3>Elegant Dress</h3>
             <p>P200</p><br>
            <button class="add-btn" onclick="addToCart('Elegant Dress', 200, this)">Add to Cart</button>
         </div>
-        <div class="card">
+       <div class="card col-md-4 col-sm-6">
             <img src="maxidress2.png">
             <h3>Elegant Dress</h3>
             <p>P250</p><br>
            <button class="add-btn" onclick="addToCart('Elegant Dress', 250, this)">Add to Cart</button>
         </div>
-        <div class="card">
+        <div class="card col-md-4 col-sm-6">
             <img src="miniskirt.png">
             <h3>Hot Skirt</h3>
             <p>P250</p><br>
            <button class="add-btn" onclick="addToCart('Hot Skirt', 250, this)">Add to Cart</button>
         </div>
-        <div class="card">
+       <div class="card col-md-4 col-sm-6">
             <img src="miniskirt2.png">
             <h3>Hot Skirt</h3>
             <p>P250</p><br>
             <button class="add-btn" onclick="addToCart('Hot Skirt', 250, this)">Add to Cart</button>
         </div>
-        <div class="card">
+        <div class="card col-md-4 col-sm-6">
             <img src="womensneaker.png">
             <h3>Sneaker</h3>
             <p>P550</p><br>
@@ -81,39 +81,39 @@
 <section id="men" class="content shop-tab invisible">
     <h2>Men Collection</h2>
 
-    <div class="products">
+    <div class="products row g-4">
 
-        <div class="card">
+        <div class="card col-md-4 col-sm-6">
             <img src="hoodie.jpeg.jfif">
             <h3>Hoodie</h3>
             <p>P350</p><br>
             <button class="add-btn" onclick="addToCart('Hoodie', 350, this)">Add to Cart</button>
         </div>
-        <div class="card">
+       <div class="card col-md-4 col-sm-6">
             <img src="hoodie2.png">
             <h3>Hoodie</h3>
             <p>P350</p><br>
             <button class="add-btn" onclick="addToCart('Hoodie', 350, this)">Add to Cart</button>
         </div>
-        <div class="card">
+        <div class="card col-md-4 col-sm-6">
             <img src="hoodie3.png">
             <h3>Hoodie</h3>
             <p>P350</p><br>
           <button class="add-btn" onclick="addToCart('Hoodie', 350, this)">Add to Cart</button>
         </div>
-        <div class="card">
+        <div class="card col-md-4 col-sm-6">
             <img src="tshirts.png">
             <h3>T-Shirt</h3>
             <p>P180</p><br>
            <button class="add-btn" onclick="addToCart('T-shirt', 180, this)">Add to Cart</button>
         </div>
-        <div class="card">
+       <div class="card col-md-4 col-sm-6">
             <img src="tshirts2.png">
             <h3>T-Shirt</h3>
             <p>P180</p><br>
             <button class="add-btn" onclick="addToCart('T-shirt', 180, this)">Add to Cart</button>
         </div>
-        <div class="card">
+        <div class="card col-md-4 col-sm-6">
             <img src="sneakers.png">
             <h3>Sneakers</h3>
             <p>P600</p><br>
@@ -123,7 +123,7 @@
 </div>
 </section>
 
-  <section class="content">
+  <section class="content container">
       
      <a href="cart.html"><button>Go to Checkout</button>
 </a>
