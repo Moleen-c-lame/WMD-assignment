@@ -739,3 +739,33 @@ form.feedback-form {
     }
 
 }
+/* ===== BOOTSTRAP SAFE FIXES ===== */
+
+.container,
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    margin: 0;
+}
+
+.card.col-md-4,
+.card.col-sm-6 {
+    border: none;
+    background: rgba(255,255,255,0.06);
+}
+
+/* Prevent Bootstrap button override */
+.btn {
+    background: linear-gradient(135deg, #ff4db8, #cc33ff);
+    border: none;
+    color: white;
+}
+
+/* Bootstrap responsive fixes */
+img {
+    max-width: 100%;
+    height: auto;
+}
